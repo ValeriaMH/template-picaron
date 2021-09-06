@@ -1,0 +1,94 @@
+collections:
+  posts:
+    output: true
+    permalink: /posts/:year/:slug
+  archives: 
+    output: true
+    
+_options:
+  content:
+    styles: /editor.css
+    blockquote: true
+    horizontalrule: true
+    format: p h1 h2 h3 h4 h5 h6
+    bold: true
+    italic: true
+    numberedlist: true
+    bulletedlist: true
+    code: true
+    table: true
+    right: right
+    center: center
+    left: left
+    embed: true
+    link: true
+    undo: true
+    redo: true
+    underline: true
+    strike: true
+    image: true
+
+_select_data:
+  aspect-ratios:
+    - square
+    - portrait
+    - portrait-tall
+    - landscape
+    - landscape-wide
+  banner-talls:
+    - tall-100
+    - tall-90
+    - tall-80
+    - tall-70
+    - tall-60
+  small-devices-talls:
+    - md-tall-80
+    - tall-60-sm
+    - tall-50-md
+    - tall-40-sm
+  image-positions:
+    - bg-pos-t
+    - bg-pos-b
+  background_colors:
+    - bg-red
+    - bg-yellow
+  text_color:
+    - text-light
+
+  column-sizes:
+    col-6: One Half
+    col-12: Full Width
+    col-4: One Third
+    col-3: One Quarter
+    col-6_sm-12: One Half Desktop (Stacked)
+    col-4_sm-12: One Third Desktop (Stacked)
+    col-3_sm-12: One Quarter Desktop (Stacked)
+
+  banner-talls:
+    tall-100: 100% window
+    tall-90: 90% window
+    tall-80: 80% window
+    tall-70: 70% window
+    tall-60: 60% window
+
+  small-devices-talls:
+    md-tall-80: 80% window Tablet
+    tall-60-sm: 60% window Mobile
+    tall-50-md: 50% window Tablet
+    tall-40-sm: 40% window Mobile
+
+  image-positions:
+    bg-pos-t: Top
+    bg-pos-b: Bottom
+  
+  background-colors:
+    bg-red: Red
+    bg-yellow: Yellow
+    bg-beige: Beige
+    bg-light: Light
+    bg-blue: Blue
+  
+  text_color:
+    text-light: Light
+  
+    

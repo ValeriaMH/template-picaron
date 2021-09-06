@@ -1,0 +1,165 @@
+---
+layout: default
+seo:
+  title: About | Peruvian Bowls
+  description: Amazing peruvian food for amazing busy people. Delivered right at your door.
+  social_image:
+  keywords:
+  hide-from-google: true
+banner_image: /images/demo-web18.jpg
+team:
+- name: Omar
+  bio: The Chef
+  description: Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione eum perferendis minus velit magni rem iure corrupti dolor minima voluptas, hic consequatur quia itaque.
+  profile_image: /images/demo-web19.jpg
+- name: Stefany
+  bio: The Boss
+  description: Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione eum perferendis minus velit magni rem iure corrupti dolor minima voluptas, hic consequatur quia itaque.
+  profile_image: /images/demo-web20.jpg
+- name: Leon
+  bio: The King
+  description: Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione eum perferendis minus velit magni rem iure corrupti dolor minima voluptas, hic consequatur quia itaque.
+  profile_image: /images/demo-web18.jpg
+banner2:
+- banner_image: /images/demo-web12.jpg
+  banner-tall: tall-70
+  small-devices-tall: tall-50-md
+highlights:
+- icon: fas fa-pepper-hot
+  title: World's Best Pantry
+  description: Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum quod et id voluptatem aliquid dignissimos, vitae p
+- icon: fas fa-star
+  title: World's best culinary destination
+  description: Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum quod et id voluptatem aliquid dignissimos, vitae p
+- icon: fas fa-star
+  title: World's Best Pantry
+  description: Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum quod et id voluptatem aliquid dignissimos, vitae p
+gallery:
+- background_image: /images/demo-web3.jpg
+  link-popup: /images/demo-web3.jpg
+  text-hover: Purple Corn
+- background_image: /images/demo-web5.jpg
+  link-popup: /images/demo-web5.jpg
+  text-hover: Purple Corn
+- background_image: /images/demo-web4.jpg
+  link-popup: /images/demo-web4.jpg
+  text-hover: Purple Corn
+- background_image: /images/demo-web2.jpg
+  link-popup: /images/demo-web2.jpg
+  text-hover: Purple Corn
+---
+
+<!-- Header & Menu -->
+
+{% include header-nav.html %}
+
+<!-- Banner About Us-->
+
+<section class="grid light-bg margin-fixed tall-60 relative">
+    <div class="col-5_sm-12 padded">
+        <div class="bg-image portrait" style="background-image:url('{{ page.banner_image }}')"></div>
+    </div>
+    
+    </div>
+    <div class="col-6_sm-12-middle padded">
+      <h2 class="big-bold editable"> About us </h2>
+      <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero nostrum ex porro qui, explicabo voluptatibus optio quibusdam quis quod, mollitia nulla vel ullam officia architecto, incidunt dignissimos repellat iste rerum. </p>
+      <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero nostrum ex porro qui, explicabo voluptatibus optio quibusdam quis quod, mollitia nulla vel ullam officia architecto, incidunt dignissimos repellat iste rerum. </p>
+      <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero nostrum ex porro qui, explicabo voluptatibus optio quibusdam quis quod, mollitia nulla vel ullam officia architecto, incidunt dignissimos repellat iste rerum. </p>
+      <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero nostrum ex porro qui, explicabo voluptatibus optio quibusdam quis quod, mollitia nulla vel ullam officia architecto, incidunt dignissimos repellat iste rerum. </p>
+    </div>
+    <div>
+        <h3 class="our-story-text editable"> Our story </h3>
+    </div>
+  </section>
+
+<!-- The Team -->
+
+  <section class="padded padded-b-lg padded-l-xlg sm-padded-lg sm-text-center">
+
+    <div class="capped-width-narrow">
+    
+    <div>
+        <h3 class="team-text editable"> The Team </h3>
+    </div>
+        
+    {% for person in page.team %}
+
+        <div class="grid flex-flip-alternate-2">
+            
+            <div class="col-5_sm-12 padded-2">
+                <img src="{{ person.profile_image }}" class="profile-image">
+            </div>
+
+            <div class="col-7_sm-12-middle padded-1">
+                <h3> Meet {{ person.name }} </h3>
+                <p> <strong> {{ person.bio }} </strong></p>
+                <p> {{ person.description }} </p>
+            </div>
+        </div>
+
+    {% endfor %}
+
+    </div>  
+
+</section>
+
+<!--------------------  PERUVIAN FOOD BANNER -------------------->
+
+{% for item in page.banner2 limit: 1 %}
+
+<section class="bg-image grid-center fixed {{item.banner-tall }} {{item.small-devices-tall }}" style="background-image:url('{{ item.banner_image }}')" id="peru">
+    <div class="col-6_sm-12-middle center">
+      <h2 class="big-bold text-light editable">
+          PERUVIAN F<em></em><strong></strong>OOD
+      </h2>
+      <h3 class="text-light editable">
+          Find out why is one of the best in the world
+      </h3>
+    </div>
+  </section> 
+
+  {% endfor %}
+
+<!-- ICONS PERUVIAN FOOD  -->
+
+  <section class="padded padded-t-lg center">
+    <h2 class="uppercase editable"> Peruvian Food Highlights </h2>
+    <div class="grid padded-1">
+
+      {% for item in page.highlights %}
+      <div class="col-4_sm-12 padded-sm">
+        <i class="{{item.icon }} big-icon"></i>
+        <h4> {{item.title }} </h4>
+        <p>{{item.description}}</p>
+      </div>
+      {% endfor %}
+  
+    </div>
+  </section>
+
+  <!-- PERUVIAN FOOD POP UP GALLERY -->
+
+  <section class="padded center">
+
+    <h2 class="uppercase editable"> Peruvian Food Gallery </h2>
+    <p class="editable"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    
+      <div class="gallery grid-center padded-1" id="lightgallery">
+
+        {% for item in page.gallery %}
+        <a class="col-3_sm-6_xs-12" href="{{item.link-popup }}">
+            <div class="hover-container" style="background-image:url('{{item.background_image }}')">
+                <div class="hover-overlay">
+                    <div class="hover-inner">
+                        <h4> {{item.text-hover}} </h4>
+                    </div>
+                </div>
+            </div>
+        </a>
+        {% endfor %}
+    
+    
+      </div>
+    
+    </section>

@@ -1,0 +1,193 @@
+---
+layout: default
+seo:
+  title: Peruvian Bowls | Ready Meals in Brisbane
+  description: Amazing peruvian food for amazing busy people. Delivered right at your door.
+  social_image:
+  keywords:
+  hide-from-google: true
+banner:
+  - banner_image: /images/demo-web17.jpg
+    image-position: bg-pos-t
+    banner-tall: tall-100
+    small-devices-tall: tall-60-sm
+how-it-works:
+  - background_image: /images/demo-web14.jpg
+    hover-title: One
+    title: Choose between a weekly meal or just one meal.
+    description: >-
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, maxime,
+      distinctio illum dolore architecto.
+  - background_image: /images/demo-web16.jpg
+    hover-title: Two
+    title: Choose between a weekly meal or just one meal.
+    description: >-
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, maxime,
+      distinctio illum dolore architecto.
+  - background_image: /images/demo-web13.jpg
+    hover-title: Three
+    title: Choose between a weekly meal or just one meal.
+    description: >-
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, maxime,
+      distinctio illum dolore architecto.
+banner2:
+  - banner_image: /images/demo-web12.jpg
+    banner-tall: tall-70
+    small-devices-tall: tall-50-md
+meal-plans:
+  - background_image: /images/demo-web8.jpg
+    title: Weekly Plan
+    description: >-
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio deleniti
+      aspernatur quod minima ullam ab, in nihil temporibus velit, quae iure
+      omnis dignissimos fuga, laudantium a quo alias qui ipsam!
+  - background_image: /images/demo-web6.jpg
+    title: 1 to 4 Meals
+    description: >-
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio deleniti
+      aspernatur quod minima ullam ab, in nihil temporibus velit, quae iure
+      omnis dignissimos fuga, laudantium a quo alias qui ipsam!
+banner-why_image: /images/demo-web10.jpg
+banner-faq_image: /images/demo-web1.jpg
+---
+
+<!-- Header & Menu -->
+
+{% include header-nav.html %}
+
+<!-- Banner section -->
+
+{% for item in page.banner limit: 1 %}
+
+<section class="bg-image {{item.image-position }} grid-left padded {{item.banner-tall }} margin-fixed {{item.small-devices-tall }}" style="background-image:url('{{ item.banner_image }}')">
+    <div class="col-7_sm-12-middle">
+      <h3>
+        <span class="big-bold text-light editable"> AMAZING PERUVIAN MEALS </span> <br />
+        <span class="medium-bold text-light editable"> for amazing busy people </span> <br />
+      </h3>
+      <h1 class="padded-b-1"> 
+        <span class="highlight text-15 editable">Ready Meals delivered right at your door.</span></h1>
+      <a href="/#order" class="button editable"> Order now </a>
+    </div>
+</section>
+
+{% endfor %}
+
+
+<!-- How it Works Section  -->
+
+<section class="padded center padded-t-lg" id="how">
+    <h2 class="uppercase editable">
+        How it works
+    </h2>
+
+    <div class="grid padded-1">
+
+      {% for item in page.how-it-works %}
+        <div class="col-4_sm-12 padded-1">
+            <div class="hover-container" style="background-image:url('{{ item.background_image }}')">
+            <div class="hover-overlay">
+                <div class="hover-inner">
+                    <h3> {{item.hover-title }} </h3>
+                </div>
+            </div>
+            </div>
+            <div class="padded">
+                <h4>{{item.title }} </h4>
+                <p>{{item.description }}</p>
+            </div>
+        </div>
+
+        {% endfor %}
+        
+        <div class="col-12 center">
+          <a href="/#order" class="button-inverted editable"> Order now </a>
+        </div>
+        
+    </div>
+</section>
+
+
+<!--------------------  PERUVIAN FOOD BANNER -------------------->
+
+{% for item in page.banner2 limit: 1%}
+
+<section class="bg-image grid-center fixed {{item.banner-tall }} {{item.small-devices-tall }}" style="background-image:url('{{ item.banner_image }}')">
+    <div class="col-6_sm-12-middle center">
+      <h2 class="big-bold text-light editable">
+          PERUVIAN F<em></em><strong></strong>OOD
+      </h2>
+      <h3 class="text-light editable">
+          Find out why is one of the best in the world
+      </h3>
+      <a href="/about/#peru" class="button editable">I want to know more</a>
+    </div>
+  </section> 
+
+  {% endfor %}
+  
+
+<!--------------------  MEAL PLANS -------------------->
+
+  <section class="padded-tb-lg" id="meals">
+
+    {% for item in page.meal-plans %}
+    <div class="grid flex-flip">
+      <div class="col-6_sm-12 bg-image" style="background-image:url('{{ item.background_image }}')"></div>
+      <div class="col-6_sm-12-middle padded">
+        <h3> {{item.title }} </h3>
+        <p> {{item.description }} </p>
+        <a class="button-inverted editable" href="/#order"> Order now </a>
+      </div>
+    </div>
+    {% endfor %}
+    
+  </section>
+
+<!--------------------  BANNER DISCOUNT -------------------->
+
+{% include special-offer.html %}
+
+<!--------------------  SHOP MEALS -------------------->
+
+{% include shopify.html %}
+
+<!--------------------  WHY PERUVIAN BOWLS -------------------->
+
+<section class="grid padded padded-l-0 padded-tb sm-padded">
+  <div class="bg-image col-7_sm-12 tall-70 tall-50-sm" style="background-image:url('{{ page.banner-why_image }}')">
+  </div>
+  <div class="col-5_sm-12-middle relative">
+    <div class="bg-beige-over bg-over">
+        <h2 class="big-bold editable">
+            Why Peruvian Bowls?
+        </h2>
+        <p class="editable">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </p>
+        <p class="editable">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </p>
+        <p class="editable">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </p>
+        <p class="editable">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </p>
+        <a class="button-inverted editable" href="/about.html"> Get to know us more </a>
+      </div>
+    </div>
+</section>
+
+<!--------------------  TESTIMONIAL SECTION -------------------->
+    
+{% include testimonial.html %}
+
+<!--------------------  FAQ SECTION -------------------->
+
+{% include faq.html %}
+
+<!--------------------  SUSCRIBE -------------------->
+
+{% include sign-up.html %}
+

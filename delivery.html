@@ -1,0 +1,70 @@
+---
+layout: default
+seo:
+  title: Delivery | Peruvian Bowls
+  description: Amazing peruvian food for amazing busy people. Delivered right at your door.
+  social_image:
+  keywords:
+  hide-from-google: true
+banner:
+  banner_image: /images/demo-web7.jpg
+  banner-tall: tall-60
+  small-devices-tall: tall-40-sm
+  banner-position: bg-pos-b
+  text_color: text-light
+steps:
+  - number: 1
+    title: Choose your meals
+    description: Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+  - number: 2
+    title: Choose a delivery option
+    description: Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+  - number: 3
+    title: We take it your house
+    description: Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+  - number: 4
+    title: Heat & Enjoy
+    description: Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+banner2:
+  banner_image: /images/demo-web15.jpg
+  banner-tall: tall-80
+  small-devices-tall: tall-50-md
+---
+
+<!-- Header & Menu -->
+
+{% include header-nav.html %}
+
+<!-- Banner section -->
+
+<section class="bg-image grid-right padded margin-fixed {{page.banner.banner-tall }} {{page.banner.small-devices-tall }} {{page.banner.banner-position }}" style="background-image:url('{{ page.banner.banner_image }}')">
+    <div class="col-5_sm-12-middle {{site.data.banner-background-colors.delivery.background_color }} padded-2">
+      <h3 class="editable"> Tasty Peruvian Food to your door </h3>
+      <p class="editable"> If you live in Brisbane or Gold Coast, we can deliver ready meals to you </p>
+      <a href="/index/#order" class="button-inverted editable"> Order now</a>
+    </div>
+</section>
+
+
+<!-- DELIVERY STEPS  -->
+
+<section class="padded center capped-width-narrow">
+  <h2 class="uppercase editable"> How delivery works </h2>
+  <div class="grid padded-1">
+
+    {% for item in page.steps %}
+    <div class="col-6_sm-12 padded">
+      <span class="number-text"> {{item.number }} </span>
+      <h4> {{item.title }}  </h4>
+      <p> {{item.description }} </p>
+    </div>
+    {% endfor %}
+
+  </div>
+</section>
+
+<!--------------------  BG IMAGE -------------------->
+
+<section class="bg-image bg-delivery3 grid-center {{page.banner2.banner-tall }} {{page.banner2.small-devices-tall }}" style="background-image:url('{{ page.banner2.banner_image }}')">
+  
+</section>  

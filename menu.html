@@ -1,0 +1,43 @@
+---
+layout: default
+seo:
+  title: Menu | Peruvian Bowls
+  description: Amazing peruvian food for amazing busy people. Delivered right at your door.
+  social_image:
+  keywords:
+  hide-from-google: true
+banner:
+  banner_image: /images/demo-web10.jpg
+  banner-tall: tall-60
+  small-devices-tall: tall-40-sm
+  banner-position: bg-pos-b
+  text_color: text-light
+---
+
+<!-- Header & Menu -->
+
+{% include header-nav.html %}
+
+<!-- Banner section -->
+<section class="bg-image grid-left padded {{page.banner.banner-tall }} {{page.banner.small-devices-tall }} {{page.banner.banner-position }} margin-fixed" style="background-image:url('{{ page.banner.banner_image }}')">
+    <div class="col-12-middle center">
+      <h3>
+        <span class="big-bold uppercase {{page.banner.text_color }} editable"> Menu </span> <br>
+        <span class="medium-bold {{page.banner.text_color }} editable"> for September 10th to 15th </span> <br>
+      </h3>
+      <h1 class="padded-b-1"> 
+        <span class="highlight text-15 editable">Order before friday 5/09</span></h1>
+    </div>
+</section>
+
+<!--------------------  BANNER DISCOUNT -------------------->
+
+{% include special-offer.html %}
+  
+ <!--------------------  SHOP MEALS -------------------->
+
+{% include shopify.html %}
+
+<!--------------------  SUSCRIBE -------------------->
+
+{% include sign-up.html %}

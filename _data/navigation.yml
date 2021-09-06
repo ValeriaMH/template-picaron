@@ -1,0 +1,22 @@
+picaron-menu:
+  link-1:
+    name: Home
+    url: /index
+  link-2: 
+    name: Menu
+    url: /menu
+  link-3: 
+    name: Delivery
+    url: /delivery
+  link-4: 
+    name: About
+    url: /about
+  link-5: 
+    name: Contact
+    url: /contact
+social:
+  instagram: true
+  facebook: true
+  youtube: false
+  pinterest: false
+  twitter: false
