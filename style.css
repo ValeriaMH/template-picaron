@@ -895,6 +895,10 @@ nav a:hover {
  margin-top: 9%;
 }
 
+.margin-fixed-sm {
+  margin-top: 5%;
+ }
+
 .our-story-text {
   font-family: 'charcuterie-deco', sans-serif;
   font-size: 3.5rem;

@@ -6,6 +6,8 @@ seo:
   social_image:
   keywords:
   hide-from-google: true
+fixed-menu: true
+notification-bar: true
 banner:
   - banner_image: /images/demo-web17.jpg
     image-position: bg-pos-t
@@ -53,25 +55,56 @@ banner-faq_image: /images/demo-web1.jpg
 
 <!-- Header & Menu -->
 
-{% include header-nav.html %}
+{% if page.fixed-menu == true %}
 
-<!-- Banner section -->
+  {% include header-nav.html %}
 
-{% for item in page.banner limit: 1 %}
+{% else %}
 
-<section class="bg-image {{item.image-position }} grid-left padded {{item.banner-tall }} margin-fixed {{item.small-devices-tall }}" style="background-image:url('{{ item.banner_image }}')">
-    <div class="col-7_sm-12-middle">
-      <h3>
-        <span class="big-bold text-light editable"> AMAZING PERUVIAN MEALS </span> <br />
-        <span class="medium-bold text-light editable"> for amazing busy people </span> <br />
-      </h3>
-      <h1 class="padded-b-1"> 
-        <span class="highlight text-15 editable">Ready Meals delivered right at your door.</span></h1>
-      <a href="/#order" class="button editable"> Order now </a>
-    </div>
-</section>
+  {% include header-nav-2.html %}
 
-{% endfor %}
+{% endif %}
+
+
+<!------------------ HOME BANNER ------------------------>
+
+{% if page.fixed-menu == true %}
+
+  {% for item in page.banner limit: 1 %}
+
+  <section class="bg-image {{item.image-position }} grid-left padded {{item.banner-tall }} {% if page.notification-bar == true %} margin-fixed {% else %} margin-fixed-sm {% endif %} {{item.small-devices-tall }}" style="background-image:url('{{ item.banner_image }}')">
+      <div class="col-7_sm-12-middle">
+        <h3>
+          <span class="big-bold text-light editable"> AMAZING PERUVIAN MEALS </span> <br />
+          <span class="medium-bold text-light editable"> for amazing busy people </span> <br />
+        </h3>
+        <h1 class="padded-b-1"> 
+          <span class="highlight text-15 editable">Ready Meals delivered right at your door.</span></h1>
+        <a href="/#order" class="button editable"> Order now </a>
+      </div>
+  </section>
+
+  {% endfor %}
+
+{% else %}
+
+  {% for item in page.banner limit: 1 %}
+
+  <section class="bg-image {{item.image-position }} grid-left padded {{item.banner-tall }} {{item.small-devices-tall }}" style="background-image:url('{{ item.banner_image }}')">
+      <div class="col-7_sm-12-middle">
+        <h3>
+          <span class="big-bold text-light editable"> AMAZING PERUVIAN MEALS </span> <br />
+          <span class="medium-bold text-light editable"> for amazing busy people </span> <br />
+        </h3>
+        <h1 class="padded-b-1"> 
+          <span class="highlight text-15 editable">Ready Meals delivered right at your door.</span></h1>
+        <a href="/#order" class="button editable"> Order now </a>
+      </div>
+  </section>
+
+  {% endfor %}
+
+{% endif %}
 
 
 <!-- How it Works Section  -->

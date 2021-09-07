@@ -1,6 +1,8 @@
 <!-- Site Header -->
 
-<header class="grid fixed-menu">
+<header class="grid">
+
+    {% if page.notification-bar == true %}
 
     <!-- Informative section Fixed -->
     <div class="col-12 padded-0">
@@ -10,6 +12,8 @@
         </div>
     
     </div>
+
+    {% endif %}
 
     <div class="col-1_md-2-middle left" data-aos="fade-right">
         <a href="/index.html" class="logo">
@@ -40,7 +44,7 @@
 </div>
 
 
-<!--------------------  Picaron Menu -------------------->
+<!--------------------  Mobile Menu -------------------->
 
 <section class="grid-middle mobile-menu padded center sm-padded-t-5">
 
