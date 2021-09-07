@@ -17,7 +17,12 @@ banner:
   image-position: bg-pos-t
   banner-tall: tall-100
   small-devices-tall: tall-60-sm
-  text_color: text-light
+  main-text_color: text-light
+  sub-text_color: text-light
+  block-position: grid-left
+  column-size: col-7_sm-12
+  highlight: true
+  highlight-text_color: var(--dark-text)
 how-it-works:
 - background_image: /images/demo-web14.jpg
   hover-title: One
@@ -75,14 +80,14 @@ banner-faq_image: /images/demo-web1.jpg
 
 {% if page.fixed-menu == true %}
 
-  <section class="bg-image {{page.banner.image-position }} grid-left padded {{page.banner.banner-tall }} {% if page.notification-bar == true %} margin-fixed {% else %} margin-fixed-sm {% endif %} {{page.banner.small-devices-tall }}" style="background-image:url('{{ page.banner.banner_image }}')">
-      <div class="col-7_sm-12-middle">
+  <section class="bg-image {{page.banner.image-position }} {{page.banner.block-position }} padded {{page.banner.banner-tall }} {% if page.notification-bar == true %} margin-fixed {% else %} margin-fixed-sm {% endif %} {{page.banner.small-devices-tall }}" style="background-image:url('{{ page.banner.banner_image }}')">
+      <div class="{{page.banner.column-size }}-middle">
         <h3>
-          <span class="big-bold {{page.banner.text_color }} editable"> AMAZING PERUVIAN MEALS </span> <br />
-          <span class="medium-bold text-light editable"> for amazing busy people </span> <br />
+          <span class="big-bold {{page.banner.main-text_color }} editable"> AMAZING PERUVIAN MEALS </span> <br />
+          <span class="medium-bold {{page.banner.sub-text_color }} editable"> for amazing busy people </span> <br />
         </h3>
         <h1 class="padded-b-1"> 
-          <span class="highlight text-15 editable">Ready Meals delivered right at your door.</span></h1>
+          <span class="{% if page.banner.highlight == true %} highlight {% endif %} {{page.banner.highlight-text_color }} text-15 editable">Ready Meals delivered right at your door.</span></h1>
         <a href="/#order" class="button editable"> Order now </a>
       </div>
   </section>
@@ -94,8 +99,8 @@ banner-faq_image: /images/demo-web1.jpg
   <section class="bg-image {{page.banner.image-position }} grid-left padded {{page.banner.banner-tall }} {{page.banner.small-devices-tall }}" style="background-image:url('{{ page.banner.banner_image }}')">
       <div class="col-7_sm-12-middle">
         <h3>
-          <span class="big-bold {{page.banner.text_color }} editable"> AMAZING PERUVIAN MEALS </span> <br />
-          <span class="medium-bold text-light editable"> for amazing busy people </span> <br />
+          <span class="big-bold {{page.banner.main-text_color }} editable"> AMAZING PERUVIAN MEALS </span> <br />
+          <span class="medium-bold {{page.banner.sub-text_color }} editable"> for amazing busy people </span> <br />
         </h3>
         <h1 class="padded-b-1"> 
           <span class="highlight text-15 editable">Ready Meals delivered right at your door.</span></h1>

@@ -51,6 +51,10 @@ _select_data:
     col-6_sm-12: One Half Desktop (Stacked)
     col-4_sm-12: One Third Desktop (Stacked)
     col-3_sm-12: One Quarter Desktop (Stacked)
+  
+  block-positions:
+    grid-left: left
+    grid-right: right
 
   banner-talls:
     tall-100: 100% window
