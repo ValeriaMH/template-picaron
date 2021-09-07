@@ -879,8 +879,6 @@ nav a:hover {
 
 .notification-bar {
   width: 100%;
-  background-color: var(--red);
-  color: white;
   padding: 0.5rem;
 }
 

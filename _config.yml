@@ -54,6 +54,10 @@ _select_data:
     - bg-yellow
   text_color:
     - text-light
+  text_align:
+    - center
+    - right
+    - left
 
   column-sizes:
     col-6: One Half
