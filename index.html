@@ -13,43 +13,44 @@ bar:
   text_color: text-light
   text-align: center
 banner:
-  - banner_image: /images/demo-web17.jpg
-    image-position: bg-pos-t
-    banner-tall: tall-100
-    small-devices-tall: tall-60-sm
+  banner_image: /images/demo-web17.jpg
+  image-position: bg-pos-t
+  banner-tall: tall-100
+  small-devices-tall: tall-60-sm
+  text_color: text-light
 how-it-works:
-  - background_image: /images/demo-web14.jpg
-    hover-title: One
-    title: Choose between a weekly meal or just one meal.
-    description: >-
+- background_image: /images/demo-web14.jpg
+  hover-title: One
+  title: Choose between a weekly meal or just one meal.
+  description: >-
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, maxime,
       distinctio illum dolore architecto.
-  - background_image: /images/demo-web16.jpg
-    hover-title: Two
-    title: Choose between a weekly meal or just one meal.
-    description: >-
+- background_image: /images/demo-web16.jpg
+  hover-title: Two
+  title: Choose between a weekly meal or just one meal.
+  description: >-
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, maxime,
       distinctio illum dolore architecto.
-  - background_image: /images/demo-web13.jpg
-    hover-title: Three
-    title: Choose between a weekly meal or just one meal.
-    description: >-
+- background_image: /images/demo-web13.jpg
+  hover-title: Three
+  title: Choose between a weekly meal or just one meal.
+  description: >-
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, maxime,
       distinctio illum dolore architecto.
 banner2:
-  - banner_image: /images/demo-web12.jpg
-    banner-tall: tall-70
-    small-devices-tall: tall-50-md
+  banner_image: /images/demo-web12.jpg
+  banner-tall: tall-70
+  small-devices-tall: tall-50-md
 meal-plans:
-  - background_image: /images/demo-web8.jpg
-    title: Weekly Plan
-    description: >-
+- background_image: /images/demo-web8.jpg
+  title: Weekly Plan
+  description: >-
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio deleniti
       aspernatur quod minima ullam ab, in nihil temporibus velit, quae iure
       omnis dignissimos fuga, laudantium a quo alias qui ipsam!
-  - background_image: /images/demo-web6.jpg
-    title: 1 to 4 Meals
-    description: >-
+- background_image: /images/demo-web6.jpg
+  title: 1 to 4 Meals
+  description: >-
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio deleniti
       aspernatur quod minima ullam ab, in nihil temporibus velit, quae iure
       omnis dignissimos fuga, laudantium a quo alias qui ipsam!
@@ -74,12 +75,10 @@ banner-faq_image: /images/demo-web1.jpg
 
 {% if page.fixed-menu == true %}
 
-  {% for item in page.banner limit: 1 %}
-
-  <section class="bg-image {{item.image-position }} grid-left padded {{item.banner-tall }} {% if page.notification-bar == true %} margin-fixed {% else %} margin-fixed-sm {% endif %} {{item.small-devices-tall }}" style="background-image:url('{{ item.banner_image }}')">
+  <section class="bg-image {{page.banner.image-position }} grid-left padded {{page.banner.banner-tall }} {% if page.notification-bar == true %} margin-fixed {% else %} margin-fixed-sm {% endif %} {{page.banner.small-devices-tall }}" style="background-image:url('{{ page.banner.banner_image }}')">
       <div class="col-7_sm-12-middle">
         <h3>
-          <span class="big-bold text-light editable"> AMAZING PERUVIAN MEALS </span> <br />
+          <span class="big-bold {{page.banner.text_color }} editable"> AMAZING PERUVIAN MEALS </span> <br />
           <span class="medium-bold text-light editable"> for amazing busy people </span> <br />
         </h3>
         <h1 class="padded-b-1"> 
@@ -88,16 +87,14 @@ banner-faq_image: /images/demo-web1.jpg
       </div>
   </section>
 
-  {% endfor %}
-
 {% else %}
 
   {% for item in page.banner limit: 1 %}
 
-  <section class="bg-image {{item.image-position }} grid-left padded {{item.banner-tall }} {{item.small-devices-tall }}" style="background-image:url('{{ item.banner_image }}')">
+  <section class="bg-image {{page.banner.image-position }} grid-left padded {{page.banner.banner-tall }} {{page.banner.small-devices-tall }}" style="background-image:url('{{ page.banner.banner_image }}')">
       <div class="col-7_sm-12-middle">
         <h3>
-          <span class="big-bold text-light editable"> AMAZING PERUVIAN MEALS </span> <br />
+          <span class="big-bold {{page.banner.text_color }} editable"> AMAZING PERUVIAN MEALS </span> <br />
           <span class="medium-bold text-light editable"> for amazing busy people </span> <br />
         </h3>
         <h1 class="padded-b-1"> 
@@ -147,9 +144,7 @@ banner-faq_image: /images/demo-web1.jpg
 
 <!--------------------  PERUVIAN FOOD BANNER -------------------->
 
-{% for item in page.banner2 limit: 1%}
-
-<section class="bg-image grid-center fixed {{item.banner-tall }} {{item.small-devices-tall }}" style="background-image:url('{{ item.banner_image }}')">
+<section class="bg-image grid-center fixed {{page.banner2.banner-tall }} {{page.banner2.small-devices-tall }}" style="background-image:url('{{ page.banner2.banner_image }}')">
     <div class="col-6_sm-12-middle center">
       <h2 class="big-bold text-light editable">
           PERUVIAN F<em></em><strong></strong>OOD
@@ -160,8 +155,6 @@ banner-faq_image: /images/demo-web1.jpg
       <a href="/about/#peru" class="button editable">I want to know more</a>
     </div>
   </section> 
-
-  {% endfor %}
   
 
 <!--------------------  MEAL PLANS -------------------->

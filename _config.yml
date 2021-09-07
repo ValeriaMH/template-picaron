@@ -38,12 +38,6 @@ _select_data:
   image-positions:
     - bg-pos-t
     - bg-pos-b
-  background_colors:
-    - bg-red
-    - bg-yellow
-    - bg-beige
-    - bg-light
-    - bg-blue
   text-align:
     - center
     - right
@@ -74,17 +68,7 @@ _select_data:
   image-positions:
     bg-pos-t: Top
     bg-pos-b: Bottom
-  
-  background-colors:
-    bg-red: Red
-    bg-yellow: Yellow
-    bg-beige: Beige
-    bg-light: Light
-    bg-blue: Blue
-  
-  text_colors:
-    text-light: Light
-  
+
   text-align:
     center: Center
     right: Right
