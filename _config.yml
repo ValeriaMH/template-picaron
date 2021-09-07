@@ -52,9 +52,12 @@ _select_data:
   background_colors:
     - bg-red
     - bg-yellow
+    - bg-beige
+    - bg-light
+    - bg-blue
   text_color:
     - text-light
-  text_align:
+  text-align:
     - center
     - right
     - left
@@ -92,7 +95,12 @@ _select_data:
     bg-light: Light
     bg-blue: Blue
   
-  text_color:
+  text_colors:
     text-light: Light
+  
+  text-align:
+    center: Center
+    right: Right
+    left: Left
   
     
