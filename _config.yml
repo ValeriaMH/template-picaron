@@ -35,17 +35,6 @@ _select_data:
     - portrait-tall
     - landscape
     - landscape-wide
-  banner-talls:
-    - tall-100
-    - tall-90
-    - tall-80
-    - tall-70
-    - tall-60
-  small-devices-talls:
-    - md-tall-80
-    - tall-60-sm
-    - tall-50-md
-    - tall-40-sm
   image-positions:
     - bg-pos-t
     - bg-pos-b
@@ -55,12 +44,6 @@ _select_data:
     - bg-beige
     - bg-light
     - bg-blue
-  text_color:
-    - text-light
-  text-align:
-    - center
-    - right
-    - left
 
   column-sizes:
     col-6: One Half
