@@ -20,18 +20,21 @@ social:
   linkedin_url:
   instagram-embed:
 design:
-  dark-text_color: '#303030'
-  grey-text_color: '#4a494a'
-  light-text_color: '#ffffff'
-  beige-text_color: '#FCF3E2'
-  red-text_color: '#EC4B33'
-  blue-text_color: '#2F76B7'
-  yellow-text_color: '#F9D749'
-  blue_color: '#2F76B7'
-  red_color: '#EC4B33'
-  beige_color: '#FCF3E2'
-  yellow_color: '#F9D749'
-  light-red_color: '#EE887F'
-  light-yellow_color: '#F5E18D'
-  light_color: '#FFFDF8'
-  white_color: '#ffffff'
+  colors:
+    dark-text_color: '#303030'
+    semi-dark-text_color: '#2F76B7'
+    grey-text_color: '#4a494a'
+    light-text_color: '#ffffff'
+    warm-text_color: '#FCF3E2'
+    accent-text_color: '#EC4B33'
+    featured-text_color: '#F9D749'
+    semi-dark_color: '#2F76B7'
+    accent_color: '#EC4B33'
+    warm_color: '#FCF3E2'
+    featured_color: '#F9D749'
+    light-accent_color: '#EE887F'
+    light-featured_color: '#F5E18D'
+    light_color: '#FFFDF8'
+    white_color: '#ffffff'
+  fonts:
+    

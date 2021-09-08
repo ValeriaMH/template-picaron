@@ -31,16 +31,15 @@ section { position: relative; }
 
 .flex-flip-alternate:nth-child(2n){  flex-direction: column-reverse; }
 
-.flex-flip-alternate-2:nth-child(even) {
-  flex-direction: row-reverse;
-}
+.flex-flip-alternate-2:nth-child(even) { flex-direction: row-reverse; }
 
 .flex-flip-row { flex-direction: row-reverse; }
 
 .flex-flip:nth-child(2n) {  flex-direction: row-reverse; }
 
-.tall-100 { min-height: 100vh; }
+/* Min Height Classes */
 .tall-115 { min-height: 115vh; }
+.tall-100 { min-height: 100vh; }
 .tall-90  { min-height: 90vh; }
 .tall-80  { min-height: 80vh; }
 .tall-70  { min-height: 70vh; }
@@ -59,18 +58,18 @@ section { position: relative; }
 .padded-1  { padding: 1rem; }
 .padded-2  { padding: 2rem; }
 
-.padded-t  { padding-top: 5%; }
+.padded-t     { padding-top: 5%; }
 .padded-t-lg  { padding-top: 10%; }
-.padded-b  { padding-bottom: 5%; }
+.padded-b     { padding-bottom: 5%; }
 .padded-b-lg  { padding-bottom: 10%; }
-.padded-l  { padding-left: 5%; }
+.padded-l     { padding-left: 5%; }
 .padded-l-lg  { padding-left: 10%; }
-.padded-l-xlg  { padding-left: 15%; }
-.padded-r  { padding-right: 5%; }
+.padded-l-xlg { padding-left: 15%; }
+.padded-r     { padding-right: 5%; }
 
-.padded-tb  { padding-top: 5%; padding-bottom: 5%; }
-.padded-lr  { padding-left: 5%; padding-right: 5%; }
-.padded-tb-lg  { padding-top: 10%; padding-bottom: 10%; }
+.padded-tb      { padding-top: 5%; padding-bottom: 5%; }
+.padded-lr      { padding-left: 5%; padding-right: 5%; }
+.padded-tb-lg   { padding-top: 10%; padding-bottom: 10%; }
 
 .padded-t-1 { padding-top: 1rem; }
 .padded-b-1 { padding-bottom: 1rem; }
@@ -119,15 +118,13 @@ section { position: relative; }
 
 /* ------------ Backgrounds & Background Images  ----------------------- */
 
-.bg-dark     { background-color: var(--green);}
+.bg-dark        { background-color: var(--green);}
 .bg-light-green { background-color: var(--light-green);}
-.bg-beige { 
-  background-color: var(--beige);
-}
-.bg-red { background-color: var(--red);}
-.bg-yellow  { background-color: var(--yellow); }
-.bg-light    { background-color: var(--light); }
-.bg-white    { background-color: var(--white); }
+.bg-beige       { background-color: var(--beige); }
+.bg-red         { background-color: var(--red);}
+.bg-yellow      { background-color: var(--yellow); }
+.bg-light       { background-color: var(--light); }
+.bg-white       { background-color: var(--white); }
 
 .bg-shadow-white {
   background-color: white;
