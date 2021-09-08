@@ -38,6 +38,10 @@ _select_data:
   image-positions:
     - bg-pos-t
     - bg-pos-b
+  text-aligns:
+    - center
+    - right
+    - left
 
   column-sizes:
     col-6: One Half
@@ -70,9 +74,16 @@ _select_data:
     bg-pos-t: Top
     bg-pos-b: Bottom
 
-  text-align:
+  text-aligns:
     center: Center
     right: Right
     left: Left
+  
+  font-styles:
+    emphasis: Extra Big Bold Text
+    big-bold: Big Bold Text
+    medium-bold: Medium Bold Text
+    text-15: Small Text
+    
   
     
