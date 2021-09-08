@@ -38,10 +38,6 @@ _select_data:
   image-positions:
     - bg-pos-t
     - bg-pos-b
-  text-aligns:
-    - center
-    - right
-    - left
 
   column-sizes:
     col-6: One Half
@@ -55,6 +51,7 @@ _select_data:
   block-positions:
     grid-left: left
     grid-right: right
+    grid-center: center
 
   banner-talls:
     tall-100: 100% window
