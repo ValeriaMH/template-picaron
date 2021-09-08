@@ -1,9 +1,12 @@
 
-<section class="center padded {{site.data.banner-background-colors.sign-up.background_color }}">
-    <h3 class="uppercase editable">
+{% if page.sign-up-banner == true %}
+
+<section class="padded-t">
+  <div class="center padded {{page.sign-up.background_color }}">
+    <h3 class="uppercase editable {{page.sign-up.background_color }}">
         Subscribe Now
     </h3>
-    <p class="editable">
+    <p class="editable {{page.sign-up.background_color }}">
         This one could be connected to your email newsletter, like mailchimp or mailerlite or just a standard email form.
     </p>
   
@@ -13,4 +16,8 @@
       <input type="submit" value="Send" class="button-red" />
     </form>
   
-  </section>
+  </div>
+</section>
+
+
+{% endif %}

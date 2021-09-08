@@ -1,5 +1,7 @@
 
 
+{% if page.special-banner == true %}
+
 <section class="center padded {{page.special-offer.background_color }}">
     <h3 class="medium-bold uppercase {{page.special-offer.main-text_color }} editable" id="order">
         Order Here
@@ -7,5 +9,7 @@
     <p class="text-15 {{page.special-offer.sub-text_color }} editable">
         You'll get a $10 discount after choosing 5 meals.
     </p>
+
+{% endif %}
   
-  </section>
+</section>
