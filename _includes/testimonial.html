@@ -1,40 +1,26 @@
 <section class="center padded padded-t padded-b-0">
-  <h2 class="uppercase"> Reviews </h2>
+  <h2 class="uppercase editable"> Reviews </h2>
   <div class="grid padded-1 horizontal-scroll">
 
-    <div class="col-4_sm-7_xs-11 padded-1">
-      <div class="card">
-        <img src="/images/demo-web22.jpg" class="profile">
-        <p class="author"> John </p>
-        <p class="company"> Envato </p>
-        <p>"Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."</p>
-        <span> ★ ★ ★ ★ ★ </span>
+    {% for item in site.data.testimonial %}
+
+    <div class="{{item.card-column-size }} padded-1">
+      <div class="card {{page.testimonial.background_color }}">
+        <img src="{{item.profile_image }}" class="profile">
+        <p class="author"> {{item.author }} </p>
+        <p class="company"> {{item.company }} </p>
+        <p>{{item.testimonial }}</p>
+        <span> {{item.stars }} </span>
       </div>
     </div>
 
-    <div class="col-4_sm-7_xs-11 padded-1">
-      <div class="card">
-        <img src="/images/demo-web23.jpg" class="profile">
-        <p class="author"> Jane </p>
-        <p class="company"> The Butchers Shop </p>
-        <p>"Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."</p>
-        <span> ★ ★ ★ ★ ★ </span>
-      </div>
-    </div>
-
-    <div class="col-4_sm-7_xs-11 padded-1">
-      <div class="card">
-        <img src="/images/demo-web21.jpg" class="profile">
-        <p class="author"> Emilio </p>
-        <p class="company"> EON </p>
-        <p>"Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."</p>
-        <span> ★ ★ ★ ★ ★ </span>
-      </div>
-    </div>
-    </div>
-    <div class="col-12 center padded-1">
-      <a href="https://google.com" class="button-inverted" target="_blank"> View our reviews in Google </a>
-    </div>
+    {% endfor %}
 
 
 </section>
+
+<div class="grid-center">
+  <div class="col-12 center padded-1">
+    <a href="https://google.com" class="button-inverted" target="_blank"> View our reviews in Google </a>
+  </div>
+</div>
