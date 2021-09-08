@@ -1,6 +1,16 @@
 general:
-  logo_image: /images/demo-web24.png
-  menu_image: /images/demo-web24.png
+  logo_path: /images/demo-web24.png
+  logo-max-width:
+  menu-logo_path: /images/demo-web24.png
+  form-email:
+technical:
+  google-fonts-embed:
+  google-analytics-embed:
+  shopify-button-embed:
+  stuff-for-head-embed:
+  body-scripts-embed:
+  cookie-banner: true
+  tracking-scripts-after-cookie-acceptance-embed:
 seo:
   site_name: Peruvian Bowls | Ready Meals in Brisbane
   title: Peruvian Bowls | Ready Meals in Brisbane
@@ -21,20 +31,42 @@ social:
   instagram-embed:
 design:
   colors:
-    dark-text_color: '#303030'
-    semi-dark-text_color: '#2F76B7'
-    grey-text_color: '#4a494a'
-    light-text_color: '#ffffff'
-    warm-text_color: '#FCF3E2'
-    accent-text_color: '#EC4B33'
-    featured-text_color: '#F9D749'
-    semi-dark_color: '#2F76B7'
-    accent_color: '#EC4B33'
-    warm_color: '#FCF3E2'
-    featured_color: '#F9D749'
-    light-accent_color: '#EE887F'
-    light-featured_color: '#F5E18D'
-    light_color: '#FFFDF8'
-    white_color: '#ffffff'
+    body_color:
+    notification-bar_color:
+    menu_color:
+    mobile-menu_color:
+    special-offer_color:
+    testimonial-cards_color:
+    sign-up_color:
+    footer_color:
+    banner-text_color:
+    heading-text_color:
+    sub-heading_color:
+    text_color:
+    footer-text_color:
+    text-link-hover_color:
   fonts:
-    
+    text-font-family:
+    heading-font-family:
+    accent-font-family:
+    button-font-family:
+    big-heading-weight:
+    heading-weight:
+    sub-heading: 
+    text-weight:
+    button-weight:
+    menu-weight:
+    menu-mobile-weight:
+    notification-bar-text-size:
+    big-heading-text-size:
+    heading-text-size:
+    sub-heading-text-size: 
+    text-size:
+    button-text-size:
+    menu-text-size:
+    menu-mobile-text-size:
+    notification-bar-text-size:
+
+
+
+
