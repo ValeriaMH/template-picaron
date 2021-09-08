@@ -30,7 +30,7 @@ body:
 menu:
   mobile-menu-text-size: '1.5rem'
   mobile-menu-text-weight: '400'
-  menu-background_color: '#FCF3E2'
+  nav-background_color: '#FCF3E2'
 footer:
   footer-text-size: '0.9rem'
   footer-text-weight: '400'
