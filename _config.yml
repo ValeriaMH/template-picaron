@@ -43,6 +43,24 @@ _select_data:
     - center
     - right
     - left
+  text_colors:
+    - dark-text
+    - semi-dark-text
+    - grey-text
+    - warm-text
+    - accent-text
+    - featured-text
+    - white-text
+  background_colors:
+    - dark-background
+    - semi-dark-background
+    - grey-background
+    - warm-background
+    - accent-background
+    - light-accent-background
+    - featured-background
+    - light-featured-background
+    - white-background
 
   column-sizes:
     col-6: One Half
@@ -74,17 +92,12 @@ _select_data:
   image-positions:
     bg-pos-t: Top
     bg-pos-b: Bottom
+    bg-pos-b: Center
 
   text-aligns:
     center: Center
     right: Right
     left: Left
-  
-  font-styles:
-    emphasis: Extra Big Bold Text
-    big-bold: Big Bold Text
-    medium-bold: Medium Bold Text
-    text-15: Small Text
     
   
     
