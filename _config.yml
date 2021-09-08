@@ -38,7 +38,7 @@ _select_data:
   image-positions:
     - bg-pos-t
     - bg-pos-b
-  text-align:
+  text-aligns:
     - center
     - right
     - left
