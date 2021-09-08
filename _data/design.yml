@@ -1,6 +1,50 @@
 colors:
-  dark-text_color:
+  dark-text_color: '#303030'
+  semi-dark_color: '#2F76B7'
+  grey-text_color: '#4a494a'
+  warm-text_color: '#FCF3E2'
+  accent-text_color: '#EC4B33'
+  featured-text_color: '#F9D749'
+  white-text_color: '#ffffff'
+  dark-background_color: '#303030'
+  semi-dark-background_color: '#2F76B7'
+  grey-background_color: '#4a494a'
+  warm-background_color: '#FCF3E2'
+  accent-background_color: '#EC4B33'
+  light-accent-background_color: '#EE887F'
+  featured-background_color: '#F9D749'
+  light-featured-background_color: '#F5E18D'
+  light-background_color: '#FFFDF8'
+  white-background_color: '#ffffff'
+testimonial:
+  card_color: '#ffffff'
+  author-text-weight: bold
+body:
+  body-font-family: "'brandon-grotesque', sans-serif"
+  body-line-height: '1.1'
+  body-heading-size: '2rem'
+  body-sub-heading-size: '1.8rem'
+  body-small-heading-size: '1.6rem'
+  body-text-size: '1rem'
+  body-text-weight: '200'
+menu:
+  mobile-menu-text-size: '1.5rem'
+  mobile-menu-text-weight: '400'
+  menu-background_color: '#FCF3E2'
+footer:
+  footer-text-size: '0.9rem'
+  footer-text-weight: '400'
+special-text:
+  big-heading-text-size: '3.5rem'
+  big-heading-text-weight: '900'
+  medium-heading-text-size: '3rem'
+  medium-heading-text-weight: '700'
+  big-text-size: '1.5rem'
+  story-team-font-family: "'charcuterie-deco', sans-serif"
+  story-team-text-size: '3.5rem'
+  number-font-family: "'charcuterie-deco', sans-serif"
+  number-text-size: '2.7rem'
 
-  light-background_color:
   
+
   

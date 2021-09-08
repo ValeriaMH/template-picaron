@@ -38,6 +38,7 @@ _select_data:
   image-positions:
     - bg-pos-t
     - bg-pos-b
+    - bg-pos-c
   text-aligns:
     - center
     - right
