@@ -80,6 +80,27 @@ _select_data:
     center: Center
     right: Right
     left: Left
+  
+  # text_colors:
+  #   dark-text: Dark Text
+  #   semi-dark-text: Semi Dark Text
+  #   grey-text: Grey Text
+  #   warm-text: Warm Text
+  #   accent-text: Accent Text
+  #   featured-text: Featured Text
+  #   white-text: White Text
+
+  # background_colors:
+  #   bg-dark: Dark Background
+  #   bg-semi-dark: Semi Dark Background
+  #   bg-grey: Grey Background
+  #   bg-warm: Warm Background
+  #   bg-accent: Accent Background
+  #   bg-light-accent: Light Accent Background
+  #   bg-featured: Featured Background
+  #   bg-light-featured: Light Featured Background
+  #   bg-light: Light Background
+  #   bg-white: White Background
     
   
     
