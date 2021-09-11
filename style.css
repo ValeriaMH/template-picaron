@@ -1039,15 +1039,17 @@ form [class*=col-] {
 }
 .contact form .button {
   width:100%;
-  background-color: var(--dark-background);
-  border: 1px solid var(--dark-text);
-  color: var(--warm-text);
   margin-top: 0.65rem;
 }
 
-.contact form .button:hover {
-  background-color: var(--warm-background);
-  color: var(--dark-text);
+.contact form .button-inverted {
+  width:100%;
+  margin-top: 0.65rem;
+}
+
+.contact form .button-special {
+  width:100%;
+  margin-top: 0.65rem;
 }
 
 .contact input {

@@ -6,27 +6,63 @@ seo:
   social_image:
   keywords:
   hide-from-google: true
+fixed-menu: true
+notification-bar: true
+bar:
+  background: bg-accent
+  text: white-text
+  text-align: center
 banner:
   banner_image: /images/demo-web6.jpg
+  image-position: bg-pos-t
   banner-tall: tall-60
   small-devices-tall: tall-40-sm
-  banner-position: bg-pos-t
-  text_color: text-light
+  column-size: col-6_sm-12
+  text-align: left
+  main-text: white-text
+  sub-text: white-text
+  block-position: grid-right
+contact:
+  button: button-inverted
 ---
 
-<!-- Header & Menu -->
+<!--------------------  HEADER AND MENU -------------------->
 
-{% include header-nav.html %}
+{% if page.fixed-menu == true %}
+
+  {% include header-nav.html %}
+
+{% else %}
+
+  {% include header-nav-2.html %}
+
+{% endif %}
 
 <!-- Banner section -->
-<section class="bg-image grid-right padded {{page.banner.banner-tall }} {{page.banner.small-devices-tall }} {{page.banner.banner-position }} margin-fixed" style="background-image:url('{{ page.banner.banner_image }}')">
-    <div class="col-6_sm-12-middle">
+
+{% if page.fixed-menu == true %}
+
+<section class="bg-image {{page.banner.block-position }} padded {{page.banner.banner-tall }} {{page.banner.small-devices-tall }} {{page.banner.image-position }} {% if page.notification-bar == true %} margin-fixed {% else %} margin-fixed-sm {% endif %}" style="background-image:url('{{ page.banner.banner_image }}')">
+    <div class="{{page.banner.column-size }}-middle">
       <h3>
-        <span class="big-bold uppercase {{page.banner.text_color }} editable"> Hola </span> <br>
-        <span class="medium-bold {{page.banner.text_color }} editable"> Get in touch </span> <br>
+        <span class="big-bold {{page.banner.main-text }} editable"> HOLA </span> <br>
+        <span class="medium-bold {{page.banner.sub-text }} editable"> Get in touch </span> <br>
       </h3>
     </div>
 </section>
+
+{% else %}
+
+<section class="bg-image {{page.banner.block-position }} padded {{page.banner.banner-tall }} {{page.banner.small-devices-tall }} {{page.banner.image-position }}" style="background-image:url('{{ page.banner.banner_image }}')">
+  <div class="{{page.banner.column-size }}-middle">
+    <h3>
+      <span class="big-bold {{page.banner.main-text }} editable"> HOLA </span> <br>
+      <span class="medium-bold {{page.banner.sub-text }} editable"> Get in touch </span> <br>
+    </h3>
+  </div>
+</section>
+
+{% endif %}
 
 <!-- Contact Form -->
 <section class="grid padded contact">
@@ -47,7 +83,7 @@ banner:
         </div>
         <div class="col-12">
           <textarea placeholder="Your Message"></textarea>
-          <input type="submit" value="Send" class="button">
+          <input type="submit" value="Send" class="{{page.contact.button }}">
         </div>
       </form>
     </div>
