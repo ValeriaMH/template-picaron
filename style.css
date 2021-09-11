@@ -913,30 +913,31 @@ nav a:hover {
 
 /* Dropdown styles */
 
-.dropdown { 
-  position: relative; 
+.dropdown {
+  position: relative;
   display: inline-block;
-}
-
-.dropdown-content {
+ }
+ .dropdown-title {
+  padding: 0.25rem 0.5rem;
+  display: inline-block;
+ }
+ .dropdown-content {
   position: absolute;
   top: 100%;
-  left: -1rem;
+  left: 0rem;
   padding: 0.5rem;
-  display:none; 
-  background-color: white;
+  display: none;
+  background-color: var(--warm-background);
   z-index: 2;
   text-align: left;
-  min-width: 10rem;
-}
-
-.dropdown:hover .dropdown-content{ 
+  min-width: 9rem;
+ }
+ .dropdown:hover .dropdown-content {
   display: block;
-}
-
-.dropdown-content a {
+ }
+ .dropdown-content a {
   display: block;
-}
+ }
 
 
 /* Accordian slides */

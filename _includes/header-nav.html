@@ -22,7 +22,16 @@
     </div>
 
     <nav class="col-11_md-10-middle right hide-sm padded-1">
-        <a href="{{ site.data.navigation.menu.link-1.url }}"> {{ site.data.navigation.menu.link-1.name }} </a>
+        
+        <div class="dropdown">
+            <a href="{{ site.data.navigation.menu.link-1.url }}" class="dropdown-title"> {{ site.data.navigation.menu.link-1.name }} </a>
+            <div class="dropdown-content">
+              <a href="/food"> Food </a>
+              <a href="/bali"> Bali </a>
+              <a href="/self-care"> Self Care </a>
+              <a href="/travel"> Travel </a>
+            </div>
+        </div>
         <a href="{{ site.data.navigation.menu.link-2.url }}"> {{ site.data.navigation.menu.link-2.name }} </a>
         <a href="{{ site.data.navigation.menu.link-3.url }}"> {{ site.data.navigation.menu.link-3.name }} </a>
         <a href="{{ site.data.navigation.menu.link-4.url }}"> {{ site.data.navigation.menu.link-4.name }} </a>
