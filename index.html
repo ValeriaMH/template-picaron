@@ -129,8 +129,6 @@ sign-up:
 
 {% else %}
 
-  {% for item in page.banner limit: 1 %}
-
   <section class="bg-image {{page.banner.image-position }} {{page.banner.block-position }} padded {{page.banner.banner-tall }} {{page.banner.small-devices-tall }}" style="background-image:url('{{ page.banner.banner_image }}')">
       <div class="{{page.banner.column-size }}-middle {{page.banner.text-align }}">
         <h3>
@@ -142,8 +140,6 @@ sign-up:
         <a href="/#order" class="{{page.banner.button }} editable"> Order now </a>
       </div>
   </section>
-
-  {% endfor %}
 
 {% endif %}
 
