@@ -52,6 +52,7 @@ _select_data:
     col-6_sm-12: One Half Desktop (Mobile Stacked)
     col-7_sm-12: 60% Desktop (Mobile Stacked)
     col-4_sm-12: One Third Desktop (Mobile Stacked)
+    col-4_sm-7_xs-11: One Third Desktop (60% Tablet 90% Mobile)
     col-3_sm-12: One Quarter Desktop (Mobile Stacked)
   
   block-positions:
