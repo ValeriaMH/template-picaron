@@ -7,7 +7,7 @@
     {% for item in site.data.testimonial %}
 
     <div class="{{item.card-column-size }} padded-1">
-      <div class="card {{page.testimonial.background_color }}">
+      <div class="card">
         <img src="{{item.profile_image }}" class="profile" />
         <p class="author"> {{item.author }} </p>
         <p class="company"> {{item.company }} </p>
@@ -23,7 +23,7 @@
 
 <div class="grid-center">
   <div class="col-12 center padded-1">
-    <a href="https://google.com" class="{{page.testimonial-section.button }}" target="_blank"> View our reviews in Google </a>
+    <a href="https://google.com" class="{{page.testimonial.button }}" target="_blank"> View our reviews in Google </a>
   </div>
 </div>
 

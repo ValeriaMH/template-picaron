@@ -47,6 +47,7 @@ how-it-works:
     description: >-
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, maxime,
       distinctio illum dolore architecto.
+how-it-works-button:
   button: button-inverted
 banner-2:
   banner_image: /images/demo-web12.jpg
@@ -86,7 +87,7 @@ why-us:
   button: button-inverted
 testimonial-section: true
 testimonial:
-  background: bg-white
+  button: button-inverted
 faq: true
 banner-faq_image: /images/demo-web1.jpg
 sign-up-banner: true
@@ -174,7 +175,7 @@ sign-up:
         {% endfor %}
         
         <div class="col-12 center">
-          <a href="/#order" class="{{page.how-it-works.button }} editable"> Order now </a>
+          <a href="/#order" class="{{page.how-it-works-button.button }} editable"> Order now </a>
         </div>
         
     </div>
@@ -243,7 +244,7 @@ sign-up:
         <p class="editable">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
         </p>
-        <a class="{{ page.why-us.button }} editable" href="/about.html"> Get to know us more </a>
+        <a class="{{page.why-us.button }} editable" href="/about.html"> Get to know us more </a>
       </div>
     </div>
 </section>
