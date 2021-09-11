@@ -19,11 +19,11 @@ banner:
   small-devices-tall: tall-60-sm
   column-size: col-7_sm-12
   text-align: left
-  main-text_color: white-text
-  sub-text_color: white-text
+  main-text: white-text
+  sub-text: white-text
   block-position: grid-left
   highlight: true
-  highlight-text_color: var(--dark-text)
+  highlight: bg-light-featured
 how-it-works:
   - column-size: col-4_sm-12
     background_image: /images/demo-web14.jpg
@@ -52,8 +52,8 @@ banner-2:
   small-devices-tall: tall-50-md
   column-size: col-6_sm-12
   text-align: center
-  main-text_color: white-text
-  sub-text_color: white-text
+  main-text: white-text
+  sub-text: white-text
   block-position: grid-center
 meal-plans:
   - background_image: /images/demo-web8.jpg
@@ -72,12 +72,12 @@ meal-plans:
       omnis dignissimos fuga, laudantium a quo alias qui ipsam!
 special-banner: true
 special-offer:
-  background_color: bg-accent
-  main-text_color: white-text
-  sub-text_color: white-text
+  background: bg-accent
+  main-text: white-text
+  sub-text: white-text
 why-us:
   background_image: /images/demo-web10.jpg
-  background_color: bg-warm
+  background: bg-warm
 testimonial-section: true
 testimonial:
   background_color: bg-white
@@ -85,9 +85,9 @@ faq: true
 banner-faq_image: /images/demo-web1.jpg
 sign-up-banner: true
 sign-up:
-  background_color: bg-featured
-  main-text_color: dark-text
-  sub-text_color: dark-text
+  background: bg-featured
+  main-text: dark-text
+  sub-text: dark-text
 ---
 
 <!--------------------  HEADER AND MENU -------------------->
@@ -110,8 +110,8 @@ sign-up:
   <section class="bg-image {{page.banner.block-position }} padded {{page.banner.banner-tall }} {% if page.notification-bar == true %} margin-fixed {% else %} margin-fixed-sm {% endif %} {{page.banner.small-devices-tall }}" style="background-image:url('{{ page.banner.banner_image }}')">
       <div class="{{page.banner.column-size }}-middle {{page.banner.text-align }}">
         <h3>
-          <span class="big-bold {{page.banner.main-text_color }} editable"> AMAZING PERUVIAN MEALS </span> <br />
-          <span class="medium-bold {{page.banner.sub-text_color }} editable"> for amazing busy people </span> <br />
+          <span class="big-bold {{page.banner.main-text }} editable"> AMAZING PERUVIAN MEALS </span> <br />
+          <span class="medium-bold {{page.banner.sub-text }} editable"> for amazing busy people </span> <br />
         </h3>
         <h1 class="padded-b-1"> 
           <span class="{% if page.banner.highlight == true %} highlight {% endif %} {{page.banner.highlight-text_color }} text-15 editable">Ready Meals delivered right at your door.</span></h1>
@@ -126,8 +126,8 @@ sign-up:
   <section class="bg-image {{page.banner.image-position }} {{page.banner.block-position }} padded {{page.banner.banner-tall }} {{page.banner.small-devices-tall }}" style="background-image:url('{{ page.banner.banner_image }}')">
       <div class="{{page.banner.column-size }}-middle {{page.banner.text-align }}">
         <h3>
-          <span class="big-bold {{page.banner.main-text_color }} editable"> AMAZING PERUVIAN MEALS </span> <br />
-          <span class="medium-bold {{page.banner.sub-text_color }} editable"> for amazing busy people </span> <br />
+          <span class="big-bold {{page.banner.main-text }} editable"> AMAZING PERUVIAN MEALS </span> <br />
+          <span class="medium-bold {{page.banner.sub-text }} editable"> for amazing busy people </span> <br />
         </h3>
         <h1 class="padded-b-1"> 
           <span class="highlight text-15 editable">Ready Meals delivered right at your door.</span></h1>
