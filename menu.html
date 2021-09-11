@@ -6,29 +6,83 @@ seo:
   social_image:
   keywords:
   hide-from-google: true
+fixed-menu: true
+notification-bar: true
+bar:
+  background: bg-accent
+  text: white-text
+  text-align: center
 banner:
   banner_image: /images/demo-web10.jpg
+  image-position: bg-pos-b
   banner-tall: tall-60
   small-devices-tall: tall-40-sm
-  banner-position: bg-pos-b
-  text_color: text-light
+  column-size: col-12
+  text-align: center
+  main-text: white-text
+  sub-text: white-text
+  block-position: grid-left
+  highlight: true
+  highlight: bg-light-featured
+special-banner: true
+special-offer:
+  background: bg-accent
+  main-text: white-text
+  sub-text: white-text
+testimonial-section: false
+testimonial:
+  button: button-inverted
+faq: false
+banner-faq_image: /images/demo-web1.jpg
+sign-up-banner: true
+sign-up:
+  background: bg-featured
+  main-text: dark-text
+  sub-text: dark-text
+  button: button-special
 ---
 
-<!-- Header & Menu -->
+<!--------------------  HEADER AND MENU -------------------->
 
-{% include header-nav.html %}
+{% if page.fixed-menu == true %}
+
+  {% include header-nav.html %}
+
+{% else %}
+
+  {% include header-nav-2.html %}
+
+{% endif %}
 
 <!-- Banner section -->
-<section class="bg-image grid-left padded {{page.banner.banner-tall }} {{page.banner.small-devices-tall }} {{page.banner.banner-position }} margin-fixed" style="background-image:url('{{ page.banner.banner_image }}')">
-    <div class="col-12-middle center">
-      <h3>
-        <span class="big-bold uppercase {{page.banner.text_color }} editable"> Menu </span> <br>
-        <span class="medium-bold {{page.banner.text_color }} editable"> for September 10th to 15th </span> <br>
-      </h3>
-      <h1 class="padded-b-1"> 
-        <span class="highlight text-15 editable">Order before friday 5/09</span></h1>
-    </div>
-</section>
+
+{% if page.fixed-menu == true %}
+
+  <section class="bg-image {{page.banner.block-position }} padded {{page.banner.banner-tall }} {% if page.notification-bar == true %} margin-fixed {% else %} margin-fixed-sm {% endif %} {{page.banner.small-devices-tall }} {{page.banner.image-position }}" style="background-image:url('{{ page.banner.banner_image }}')">
+      <div class="{{page.banner.column-size }}-middle {{page.banner.text-align }}">
+        <h3>
+          <span class="big-bold {{page.banner.main-text }} editable"> MENU </span> <br />
+          <span class="medium-bold {{page.banner.sub-text }} editable"> for September 10th to 15th </span> <br />
+        </h3>
+        <h1 class="padded-b-1"> 
+          <span class="{% if page.banner.highlight == true %} highlight {% endif %} {{page.banner.highlight }} text-15 editable">Order before friday 5/09</span></h1>
+      </div>
+  </section>
+
+{% else %}
+
+  <section class="bg-image {{page.banner.image-position }} {{page.banner.block-position }} padded {{page.banner.banner-tall }} {{page.banner.small-devices-tall }}" style="background-image:url('{{ page.banner.banner_image }}')">
+      <div class="{{page.banner.column-size }}-middle {{page.banner.text-align }}">
+        <h3>
+          <span class="big-bold {{page.banner.main-text }} editable"> MENU </span> <br />
+          <span class="medium-bold {{page.banner.sub-text }} editable"> for September 10th to 15th </span> <br />
+        </h3>
+        <h1 class="padded-b-1"> 
+          <span class="{% if page.banner.highlight == true %} highlight {% endif %} {{page.banner.highlight }} text-15 editable">Order before friday 5/09</span></h1>
+      </div>
+  </section>
+
+{% endif %}
 
 <!--------------------  BANNER DISCOUNT -------------------->
 
@@ -37,6 +91,14 @@ banner:
  <!--------------------  SHOP MEALS -------------------->
 
 {% include shopify.html %}
+
+<!--------------------  TESTIMONIAL SECTION -------------------->
+    
+{% include testimonial.html %}
+
+<!--------------------  FAQ SECTION -------------------->
+
+{% include faq.html %}
 
 <!--------------------  SUSCRIBE -------------------->
 

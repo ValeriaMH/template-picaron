@@ -53,19 +53,19 @@ highlights:
 gallery:
 - column-size: col-3_sm-6_xs-12
   background_image: /images/demo-web3.jpg
-  link-popup: /images/demo-web3.jpg
+  popup_image: /images/demo-web3.jpg
   text-hover: Purple Corn
 - column-size: col-3_sm-6_xs-12
   background_image: /images/demo-web5.jpg
-  link-popup: /images/demo-web5.jpg
+  popup_image: /images/demo-web5.jpg
   text-hover: Purple Corn
 - column-size: col-3_sm-6_xs-12
   background_image: /images/demo-web4.jpg
-  link-popup: /images/demo-web4.jpg
+  popup_image: /images/demo-web4.jpg
   text-hover: Purple Corn
 - column-size: col-3_sm-6_xs-12
   background_image: /images/demo-web2.jpg
-  link-popup: /images/demo-web2.jpg
+  popup_image: /images/demo-web2.jpg
   text-hover: Purple Corn
 ---
 
@@ -198,7 +198,7 @@ gallery:
       <div class="gallery grid-center padded-1" id="lightgallery">
 
         {% for item in page.gallery %}
-        <a class="{{item.column-size }}" href="{{item.link-popup }}">
+        <a class="{{item.column-size }}" href="{{item.popup_image }}">
             <div class="hover-container" style="background-image:url('{{item.background_image }}')">
                 <div class="hover-overlay">
                     <div class="hover-inner">
