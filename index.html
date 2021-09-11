@@ -80,7 +80,7 @@ why-us:
   background: bg-warm
 testimonial-section: true
 testimonial:
-  background_color: bg-white
+  background: bg-white
 faq: true
 banner-faq_image: /images/demo-web1.jpg
 sign-up-banner: true
@@ -114,7 +114,7 @@ sign-up:
           <span class="medium-bold {{page.banner.sub-text }} editable"> for amazing busy people </span> <br />
         </h3>
         <h1 class="padded-b-1"> 
-          <span class="{% if page.banner.highlight == true %} highlight {% endif %} {{page.banner.highlight-text_color }} text-15 editable">Ready Meals delivered right at your door.</span></h1>
+          <span class="{% if page.banner.highlight == true %} highlight {% endif %} {{page.banner.highlight }} text-15 editable">Ready Meals delivered right at your door.</span></h1>
         <a href="/#order" class="button editable"> Order now </a>
       </div>
   </section>
@@ -130,7 +130,7 @@ sign-up:
           <span class="medium-bold {{page.banner.sub-text }} editable"> for amazing busy people </span> <br />
         </h3>
         <h1 class="padded-b-1"> 
-          <span class="highlight text-15 editable">Ready Meals delivered right at your door.</span></h1>
+          <span class="{% if page.banner.highlight == true %} highlight {% endif %} {{page.banner.highlight }} text-15 editable">Ready Meals delivered right at your door.</span></h1>
         <a href="/#order" class="button editable"> Order now </a>
       </div>
   </section>
