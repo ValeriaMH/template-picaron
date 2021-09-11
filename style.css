@@ -601,11 +601,12 @@ p a:hover {
 
 .button,
 .button-inverted,
-.button-accent { 
+.button-special { 
     display: inline-block;
     text-decoration: none;
-    border: 1px solid var(--warm-text);
-    background-color: var(--warm-background);
+    border: 1px solid var(--default-border);
+    color: var(--default-text);
+    background-color: var(--default-background);
     padding: 0.8rem 2rem;
     transition: 0.3s;
     cursor: pointer;
@@ -615,33 +616,33 @@ p a:hover {
 }
 
 .button:hover {
-  border: 1px solid var(--warm-text);
-  background-color: var(--dark-background);
-  color: var(--warm-text);
+  border: 1px solid var(--default-hover-border);
+  background-color: var(--default-hover-background);
+  color: var(--default-hover-text);
 }
 
 .button-inverted {
-  border: 1px solid var(--dark-text);
-  background-color: var(--dark-background);
-  color: var(--warm-text);
+  border: 1px solid var(--inverted_border);
+  background-color: var(--inverted-background);
+  color: var(--inverted-text);
 }
 
 .button-inverted:hover {
-  border: 1px solid var(--dark-text);
-  background-color: var(--warm-background);
-  color: var(--dark-text);
+  border: 1px solid var(--inverted-hover-border);
+  background-color: var(--inverted-hover-background);
+  color: var(--inverted-hover-text);
 }
 
-.button-accent {
-  border: 1px solid var(--accent-text);
-  background-color: var(--accent-background);
-  color: var(--white-text);
+.button-special {
+  border: 1px solid var(--special_border);
+  background-color: var(--special-background);
+  color: var(--special-text);
 }
 
-.button-accent:hover {
-  border: 1px solid var(--accent-text);
-  background-color: var(--warm-background);
-  color: var(--accent-text);
+.button-special:hover {
+  border: 1px solid var(--special-hover-border);
+  background-color: var(--special-hover-background);
+  color: var(--special-hover-text);
 }
 
 .subtle-button {

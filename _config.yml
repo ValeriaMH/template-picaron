@@ -137,7 +137,7 @@ _select_data:
   buttons:
     button: Default Button
     button-inverted: Inverted Button
-    button-accent: Accent Button
+    button-special: Special Button
     
   
     
