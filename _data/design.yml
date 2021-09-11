@@ -1,4 +1,4 @@
-colors:
+text_colors:
   dark-text_color: '#303030'
   semi-dark_color: '#2F76B7'
   grey-text_color: '#4a494a'
@@ -6,6 +6,7 @@ colors:
   accent-text_color: '#EC4B33'
   featured-text_color: '#F9D749'
   white-text_color: '#ffffff'
+background_colors:
   dark-background_color: '#303030'
   semi-dark-background_color: '#2F76B7'
   grey-background_color: '#4a494a'
