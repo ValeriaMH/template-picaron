@@ -81,7 +81,7 @@ _select_data:
     right: Right
     left: Left
   
-  text-class:
+  texts:
     dark-text: Dark Text
     semi-dark-text: Semi Dark Text
     grey-text: Grey Text
@@ -90,7 +90,7 @@ _select_data:
     featured-text: Featured Text
     white-text: White Text
 
-  background-class:
+  backgrounds:
     bg-dark: Dark Background
     bg-semi-dark: Semi Dark Background
     bg-grey: Grey Background
