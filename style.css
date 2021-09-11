@@ -601,7 +601,7 @@ p a:hover {
 
 .button,
 .button-inverted,
-.button-red { 
+.button-accent { 
     display: inline-block;
     text-decoration: none;
     border: 1px solid var(--warm-text);
@@ -617,7 +617,7 @@ p a:hover {
 .button:hover {
   border: 1px solid var(--warm-text);
   background-color: var(--dark-background);
-  color: var(--beige-text);
+  color: var(--warm-text);
 }
 
 .button-inverted {

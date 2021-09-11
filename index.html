@@ -24,6 +24,7 @@ banner:
   block-position: grid-left
   highlight: true
   highlight: bg-light-featured
+  button: button
 how-it-works:
   - column-size: col-4_sm-12
     background_image: /images/demo-web14.jpg
@@ -46,6 +47,7 @@ how-it-works:
     description: >-
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, maxime,
       distinctio illum dolore architecto.
+  button: button-inverted
 banner-2:
   banner_image: /images/demo-web12.jpg
   banner-tall: tall-70
@@ -55,6 +57,7 @@ banner-2:
   main-text: white-text
   sub-text: white-text
   block-position: grid-center
+  button: button
 meal-plans:
   - background_image: /images/demo-web8.jpg
     image-position: bg-pos-c
@@ -63,6 +66,7 @@ meal-plans:
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio deleniti
       aspernatur quod minima ullam ab, in nihil temporibus velit, quae iure
       omnis dignissimos fuga, laudantium a quo alias qui ipsam!
+    button: button-inverted
   - background_image: /images/demo-web6.jpg
     image-position: bg-pos-b
     title: 1 to 4 Meals
@@ -70,6 +74,7 @@ meal-plans:
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio deleniti
       aspernatur quod minima ullam ab, in nihil temporibus velit, quae iure
       omnis dignissimos fuga, laudantium a quo alias qui ipsam!
+    button: button-inverted
 special-banner: true
 special-offer:
   background: bg-accent
@@ -78,6 +83,7 @@ special-offer:
 why-us:
   background_image: /images/demo-web10.jpg
   background: bg-warm
+  button: button-inverted
 testimonial-section: true
 testimonial:
   background: bg-white
@@ -88,6 +94,7 @@ sign-up:
   background: bg-featured
   main-text: dark-text
   sub-text: dark-text
+  button: button-accent
 ---
 
 <!--------------------  HEADER AND MENU -------------------->
@@ -115,7 +122,7 @@ sign-up:
         </h3>
         <h1 class="padded-b-1"> 
           <span class="{% if page.banner.highlight == true %} highlight {% endif %} {{page.banner.highlight }} text-15 editable">Ready Meals delivered right at your door.</span></h1>
-        <a href="/#order" class="button editable"> Order now </a>
+        <a href="/#order" class="{{page.banner.button }} editable"> Order now </a>
       </div>
   </section>
 
@@ -131,7 +138,7 @@ sign-up:
         </h3>
         <h1 class="padded-b-1"> 
           <span class="{% if page.banner.highlight == true %} highlight {% endif %} {{page.banner.highlight }} text-15 editable">Ready Meals delivered right at your door.</span></h1>
-        <a href="/#order" class="button editable"> Order now </a>
+        <a href="/#order" class="{{page.banner.button }} editable"> Order now </a>
       </div>
   </section>
 
@@ -167,7 +174,7 @@ sign-up:
         {% endfor %}
         
         <div class="col-12 center">
-          <a href="/#order" class="button-inverted editable"> Order now </a>
+          <a href="/#order" class="{{page.how-it-works.button }} editable"> Order now </a>
         </div>
         
     </div>
@@ -178,13 +185,13 @@ sign-up:
 
 <section class="bg-image {{page.banner-2.block-position }} fixed {{page.banner-2.banner-tall }} {{page.banner-2.small-devices-tall }}" style="background-image:url('{{ page.banner-2.banner_image }}')">
     <div class="{{page.banner-2.column-size }}-middle {{page.banner-2.text-align }}">
-      <h2 class="big-bold {{page.banner-2.main-text_color }} editable">
+      <h2 class="big-bold {{page.banner-2.main-text }} editable">
           PERUVIAN FOOD
       </h2>
-      <h3 class="{{page.banner-2.sub-text_color }} editable">
+      <h3 class="{{page.banner-2.sub-text }} editable">
           Find out why is one of the best in the world
       </h3>
-      <a href="/about/#peru" class="button editable">I want to know more</a>
+      <a href="/about/#peru" class="{{page.banner-2.button }} editable">I want to know more</a>
     </div>
   </section> 
   
@@ -199,7 +206,7 @@ sign-up:
       <div class="col-6_sm-12-middle padded">
         <h3> {{item.title }} </h3>
         <p> {{item.description }} </p>
-        <a class="button-inverted editable" href="/#order"> Order now </a>
+        <a class="{{item.button }} editable" href="/#order"> Order now </a>
       </div>
     </div>
     {% endfor %}
@@ -220,7 +227,7 @@ sign-up:
   <div class="bg-image col-7_sm-12 tall-70 tall-50-sm" style="background-image:url('{{ page.why-us.background_image }}')">
   </div>
   <div class="col-5_sm-12-middle relative">
-    <div class="bg-why-over {{ page.why-us.background_color }} bg-over">
+    <div class="bg-why-over {{ page.why-us.background }} bg-over">
         <h2 class="big-bold editable">
             Why Peruvian Bowls?
         </h2>
@@ -236,7 +243,7 @@ sign-up:
         <p class="editable">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
         </p>
-        <a class="button-inverted editable" href="/about.html"> Get to know us more </a>
+        <a class="{{ page.why-us.button }} editable" href="/about.html"> Get to know us more </a>
       </div>
     </div>
 </section>

@@ -132,6 +132,11 @@ _select_data:
     bg-light-featured: Light Featured Background
     bg-light: Light Background
     bg-white: White Background
+  
+  buttons:
+    button: Default Button
+    button-inverted: Inverted Button
+    button-accent: Accent Button
     
   
     
