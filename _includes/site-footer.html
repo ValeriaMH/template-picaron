@@ -2,14 +2,14 @@
 <footer class="grid-top padded padded-b-0 sm-text-center">
     <!-- column -->
     <div class="col-3_sm-12 padded-1">
-      <h2 class="logo editable"> PERUVIAN BOWLS </h2>
+      <h2 class="logo editable"> SHE. </h2>
       <p class=> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
     </div>
     <div class="col-1 sm-hidden"> <!-- empty filler --> </div>
   
     <!-- column -->
     <div class="col-3_sm-4_xs-12 padded-1 hide-sm">
-      <h4 class="editable"> QUICK LINKS </h4>
+      <h4 class="editable"> Quick Links </h4>
       <nav>
         <a href="{{ site.data.navigation.quick-links.link-1.url }}"> {{ site.data.navigation.quick-links.link-1.name }} </a>
         <a href="{{ site.data.navigation.quick-links.link-2.url }}"> {{ site.data.navigation.quick-links.link-2.name }} </a>
@@ -20,7 +20,7 @@
   
     <!-- column -->
     <div class="col-3_sm-4_xs-12 padded-1">
-      <h4 class="editable"> EXPLORE </h4>
+      <h4 class="editable"> Explore </h4>
       <nav>
         <a href="{{ site.data.navigation.menu.link-1.url }}"> {{ site.data.navigation.menu.link-1.name }} </a>
         <a href="{{ site.data.navigation.menu.link-2.url }}"> {{ site.data.navigation.menu.link-2.name }} </a>
@@ -32,7 +32,7 @@
   
     <!-- column -->
     <div class="col-2_sm-4_xs-12 padded-1 sm-inline">
-      <h4 class="uppercase"> Connect </h4>
+      <h4 class="editable"> Connect </h4>
       <nav>
         {% if site.data.navigation.social.instagram == true %}
 
@@ -66,6 +66,14 @@
 
             {% endif %}
 
+            {% if site.data.navigation.social.tik-tok == true %}
+
+            <a href="{{ site.data.site-settings.social.tik-tok_url }}">
+                <i class="fab fa-tiktok"></i>
+            </a>
+
+            {% endif %}
+
             {% if site.data.navigation.social.twitter == true %}
 
             <a href="{{ site.data.site-settings.social.twitter_url }}">
@@ -76,12 +84,12 @@
       </nav>
     </div>
 
-    <div class="col-12 center padded-t-1">
-        <p class="subtitle margin-b-0"> Website by
+    <div class="col-12 center padded-sm padded-b-05">
+        <p class="subtitle-2 margin-b-0"> Website by
             <a href="https://www.picaronstudio.com"> Picaron Studio
             </a>
         </p>
-        <p class="subtitle"> Copyright 2021</p>
+        <p class="subtitle-2"> Copyright 2021</p>
     </div>
 
   </footer>
