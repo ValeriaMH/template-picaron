@@ -22,35 +22,35 @@ banner:
   small-devices-tall: tall-60-sm
   column-size: col-7_sm-12
   text-align: left
-  main-content: PERUVIAN
-  sub-content: BOWLS
-  highlighted-content: Brisbane
+  main-content: The Coffee Shop
+  sub-content: Preparing delicious meals since 1999
+  highlighted-content: Cafe Restaurant & take away food in Sydney
   main-text: white-text
   sub-text: white-text
   block-position: grid-left
   highlight: true
-  highlight-background: bg-light-featured
+  highlight-background: bg-light-accent
   button: button
-  button-text: shop
+  button-text: Order now
 first-section:
   - column-size: col-4_sm-12
     background_image: /images/cafe-web7.jpeg
     hover-title: One
-    title: Choose between a weekly meal or just one meal.
+    title: Choose your meals & drinks
     description: >-
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, maxime,
       distinctio illum dolore architecto.
   - column-size: col-4_sm-12
     background_image: /images/cafe-web15.jpeg
     hover-title: Two
-    title: Choose between a weekly meal or just one meal.
+    title: We deliver it to you
     description: >-
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, maxime,
       distinctio illum dolore architecto.
   - column-size: col-4_sm-12
     background_image: /images/cafe-web10.jpeg
     hover-title: Three
-    title: Choose between a weekly meal or just one meal.
+    title: Enjoy in the comfort of your house
     description: >-
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, maxime,
       distinctio illum dolore architecto.
@@ -70,7 +70,7 @@ best-sellers-heading: true
 best-sellers:
   - background_image: /images/cafe-web20.webp
     image-position: bg-pos-c
-    title: Weekly Plan
+    title: Dine in
     description: >-
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio deleniti
       aspernatur quod minima ullam ab, in nihil temporibus velit, quae iure
@@ -78,7 +78,7 @@ best-sellers:
     button: button-inverted
   - background_image: /images/cafe-web8.jpeg
     image-position: bg-pos-b
-    title: 1 to 4 Meals
+    title: Take away
     description: >-
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio deleniti
       aspernatur quod minima ullam ab, in nihil temporibus velit, quae iure
@@ -104,7 +104,7 @@ sign-up:
   background: bg-featured
   main-text: dark-text
   sub-text: dark-text
-  button: button-special
+  button: button
 ---
 
 {% if page.fixed-menu == true and page.full-menu == true %}
@@ -217,12 +217,12 @@ sign-up:
 <section class="bg-image {{page.banner-2.block-position }} fixed {{page.banner-2.banner-tall }} {{page.banner-2.small-devices-tall }}" style="background-image:url('{{ page.banner-2.banner_image }}')">
     <div class="{{page.banner-2.column-size }}-middle {{page.banner-2.text-align }}">
       <h2 class="big-bold {{page.banner-2.main-text }} editable">
-          PERUVIAN FOOD
+          How it all started
       </h2>
       <h3 class="{{page.banner-2.sub-text }} editable">
-          Find out why is one of the best in the world
+          We followed our dreams and The Coffee Shop was created
       </h3>
-      <a href="/about/#peru" class="{{page.banner-2.button }} editable">I want to know more</a>
+      <a href="/about/#peru" class="{{page.banner-2.button }} editable">Read our story</a>
     </div>
   </section> 
   
@@ -232,7 +232,7 @@ sign-up:
   <section class="padded-tb-lg" id="{{site.data.navigation.quick-links.link-2.id }}">
 
     {% if page.best-sellers-heading == true %}
-    <h2 class="editable center padded-sm">Best Sellers</h2>
+    <h2 class="editable center padded-sm">Where do you want to eat?</h2>
     {% endif %}
 
     {% for item in page.best-sellers %}
@@ -241,7 +241,7 @@ sign-up:
       <div class="col-6_sm-12-middle padded">
         <h3> {{item.title }} </h3>
         <p> {{item.description }} </p>
-        <a class="{{item.button }} editable" href="/#order"> Order now </a>
+        <a class="{{item.button }} editable" href="/#order"> Order or Book now </a>
       </div>
     </div>
     {% endfor %}

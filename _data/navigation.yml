@@ -1,13 +1,13 @@
 menu:
   link-1:
-    name: Home
+    name: Templates
     url: /index
   link-2: 
     name: Menu
     url: /menu
   link-3: 
     name: Delivery
-    url: /delivery
+    url: /menu
   link-4: 
     name: About
     url: /about
@@ -17,23 +17,24 @@ menu:
 social:
   instagram: true
   facebook: true
-  youtube: false
+  youtube: true
   pinterest: false
   twitter: false
+  tik-tok: false
 quick-links:
   link-1:
     name: Order Now
     url: /index/#order
     id: order
   link-2: 
-    name: Meal Options
+    name: Dine in or out
     url: /index/#meals
     id: meals
   link-3: 
-    name: How it works
+    name: How Delivery Works
     url: /index/#how
     id: how
   link-4: 
-    name: About Peruvian Food
+    name: Our Meals
     url: /about/#peru
     id: peru

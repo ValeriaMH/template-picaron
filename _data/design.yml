@@ -37,19 +37,19 @@ footer:
   footer-text-weight: '400'
 buttons:
   default-button:
-    default-background_color: '#ffd9e7'
-    default-border_color: '#ffd9e7'
-    default-text_color: '#ea759c'
-    default-hover-background_color: '#ea759c'
-    default-hover-border_color: '#ea759c'
-    default-hover-text_color: '#ffd9e7'
+    default-background_color: '#f2e1c2'
+    default-border_color: '#f2e1c2'
+    default-text_color: '#f7844b'
+    default-hover-background_color: '#f7844b'
+    default-hover-border_color: '#f7844b'
+    default-hover-text_color: '#f2e1c2'
   inverted-button:
-    inverted-background_color: '#ea759c'
-    inverted-border_color: '#ea759c'
-    inverted-text_color: '#ffd9e7'
-    inverted-hover-background_color: '#ffd9e7'
-    inverted-hover-border_color: '#ea759c'
-    inverted-hover-text_color: '#ea759c'
+    inverted-background_color: '#f7844b'
+    inverted-border_color: '#f7844b'
+    inverted-text_color: '#f2e1c2'
+    inverted-hover-background_color: '#f2e1c2'
+    inverted-hover-border_color: '#f7844b'
+    inverted-hover-text_color: '#f7844b'
   special-button:
     special-background_color: '#ea759c'
     special-border_color: '#ea759c'
@@ -60,7 +60,7 @@ buttons:
 special-text:
   big-heading-text-size: '4rem'
   big-heading-text-weight: '700'
-  medium-heading-text-size: '2.8rem'
+  medium-heading-text-size: '2.5rem'
   medium-heading-text-weight: '400'
   big-text-size: '1.5rem'
   story-team-font-family: "'charcuterie-deco', sans-serif"

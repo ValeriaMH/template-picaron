@@ -31,7 +31,11 @@
               <a href="/travel"> Travel </a>
             </div>
         </div>
+        {% if page.menu.button-style == true %}
+        <a href="{{ site.data.navigation.menu.link-2.url }}" class="button"> {{ site.data.navigation.menu.link-2.name }} </a>
+        {% else %}
         <a href="{{ site.data.navigation.menu.link-2.url }}"> {{ site.data.navigation.menu.link-2.name }} </a>
+        {% endif %}
         <a href="{{ site.data.navigation.menu.link-3.url }}"> {{ site.data.navigation.menu.link-3.name }} </a>
         <a href="{{ site.data.navigation.menu.link-4.url }}"> {{ site.data.navigation.menu.link-4.name }} </a>
         <a href="{{ site.data.navigation.menu.link-5.url }}"> {{ site.data.navigation.menu.link-5.name }} </a>
