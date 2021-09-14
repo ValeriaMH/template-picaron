@@ -1,34 +1,40 @@
 ---
 layout: default
 seo:
-  title: Menu | Peruvian Bowls
+  title: Menu | The Coffee Shop
   description: Amazing peruvian food for amazing busy people. Delivered right at your door.
   social_image:
   keywords:
   hide-from-google: true
 fixed-menu: true
+full-menu: false
 notification-bar: true
 bar:
-  background: bg-accent
+  background: bg-dark
   text: white-text
   text-align: center
+menu:
+  button-style: true
 banner:
-  banner_image: /images/demo-web10.jpg
-  image-position: bg-pos-b
+  banner_image: /images/cafe-web8.jpeg
+  image-position: bg-pos-c
   banner-tall: tall-60
   small-devices-tall: tall-40-sm
   column-size: col-12
   text-align: center
+  main-content: Menu
+  sub-content: Dine in & Take Away
+  highlighted-content: Delivery takes 2 days to arrive
   main-text: white-text
   sub-text: white-text
   block-position: grid-left
   highlight: true
-  highlight: bg-light-featured
+  highlight-background: bg-featured
 special-banner: true
 special-offer:
-  background: bg-accent
-  main-text: white-text
-  sub-text: white-text
+  background: bg-warm
+  main-text: dark-text
+  sub-text: dark-text
 testimonial-section: false
 testimonial:
   button: button-inverted
@@ -39,46 +45,76 @@ sign-up:
   background: bg-featured
   main-text: dark-text
   sub-text: dark-text
-  button: button-special
+  button: button
 ---
 
 <!--------------------  HEADER AND MENU -------------------->
 
-{% if page.fixed-menu == true %}
+{% if page.fixed-menu == true and page.full-menu == true %}
 
-  {% include header-nav.html %}
+  <section class="bg-image {{page.banner.block-position }} {{page.banner.banner-tall }} {{page.banner.small-devices-tall }}" style="background-image:url('{{ page.banner.banner_image }}')">
 
-{% else %}
+    {% include header-nav-3.html %}
 
-  {% include header-nav-2.html %}
-
-{% endif %}
-
-<!-- Banner section -->
-
-{% if page.fixed-menu == true %}
-
-  <section class="bg-image {{page.banner.block-position }} padded {{page.banner.banner-tall }} {% if page.notification-bar == true %} margin-fixed {% else %} margin-fixed-sm {% endif %} {{page.banner.small-devices-tall }} {{page.banner.image-position }}" style="background-image:url('{{ page.banner.banner_image }}')">
-      <div class="{{page.banner.column-size }}-middle {{page.banner.text-align }}">
+      <div class="{{page.banner.column-size }}-middle {{page.banner.text-align }} padded padded-t-lg">
         <h3>
-          <span class="big-bold {{page.banner.main-text }} editable"> MENU </span> <br />
-          <span class="medium-bold {{page.banner.sub-text }} editable"> for September 10th to 15th </span> <br />
+          <span class="big-bold {{page.banner.main-text }} editable"> {{page.banner.main-content }} </span> <br />
+          <span class="medium-bold {{page.banner.sub-text }} editable"> {{page.banner.sub-content }} </span> <br />
         </h3>
         <h1 class="padded-b-1"> 
-          <span class="{% if page.banner.highlight == true %} highlight {% endif %} {{page.banner.highlight }} text-15 editable">Order before friday 5/09</span></h1>
+          <span class="{% if page.banner.highlight == true %} highlight {% endif %} {{page.banner.highlight-background }} text-15 editable">{{page.banner.highlighted-content }}</span></h1>
+        <a href="/#order" class="{{page.banner.button }} editable"> {{page.banner.button-text }} </a>
+      </div>
+  </section>
+  
+{% elsif page.fixed-menu != true and page.full-menu == true %}
+
+  <section class="bg-image {{page.banner.image-position }} {{page.banner.block-position }} {{page.banner.banner-tall }} {{page.banner.small-devices-tall }}" style="background-image:url('{{ page.banner.banner_image }}')">
+
+    {% include header-nav-4.html %}
+
+      <div class="{{page.banner.column-size }} {{page.banner.text-align }} padded">
+        <h3>
+          <span class="big-bold {{page.banner.main-text }} editable"> {{page.banner.main-content }} </span> <br />
+          <span class="medium-bold {{page.banner.sub-text }} editable"> {{page.banner.sub-content }}. </span> <br />
+        </h3>
+        <h1 class="padded-b-1"> 
+          <span class="{% if page.banner.highlight == true %} highlight {% endif %} {{page.banner.highlight-background }} text-15 editable">{{page.banner.highlighted-content }}</span></h1>
+        <a href="/#order" class="{{page.banner.button }} editable"> {{page.banner.button-text }} </a>
       </div>
   </section>
 
-{% else %}
+{% elsif page.fixed-menu == true and page.full-menu != true %}
 
-  <section class="bg-image {{page.banner.image-position }} {{page.banner.block-position }} padded {{page.banner.banner-tall }} {{page.banner.small-devices-tall }}" style="background-image:url('{{ page.banner.banner_image }}')">
-      <div class="{{page.banner.column-size }}-middle {{page.banner.text-align }}">
+  {% include header-nav.html %}
+
+  <section class="bg-image {{page.banner.block-position }} {{page.banner.banner-tall }} {{page.banner.small-devices-tall }} {% if page.notification-bar == true %} margin-fixed {% else %} margin-fixed-sm {% endif %}" style="background-image:url('{{ page.banner.banner_image }}')">
+
+      <div class="{{page.banner.column-size }}-middle {{page.banner.text-align }} padded">
         <h3>
-          <span class="big-bold {{page.banner.main-text }} editable"> MENU </span> <br />
-          <span class="medium-bold {{page.banner.sub-text }} editable"> for September 10th to 15th </span> <br />
+          <span class="big-bold {{page.banner.main-text }} editable"> {{page.banner.main-content }} </span> <br />
+          <span class="medium-bold {{page.banner.sub-text }} editable"> {{page.banner.sub-content }} </span> <br />
         </h3>
         <h1 class="padded-b-1"> 
-          <span class="{% if page.banner.highlight == true %} highlight {% endif %} {{page.banner.highlight }} text-15 editable">Order before friday 5/09</span></h1>
+          <span class="{% if page.banner.highlight == true %} highlight {% endif %} {{page.banner.highlight-background }} text-15 editable">{{page.banner.highlighted-content }}</span></h1>
+        <a href="/#order" class="{{page.banner.button }} editable"> {{page.banner.button-text }} </a>
+      </div>
+  </section>
+
+  {% elsif page.fixed-menu != true and page.full-menu != true %}
+
+  {% include header-nav-2.html %}
+
+  <section class="bg-image {{page.banner.block-position }} {{page.banner.banner-tall }} {{page.banner.small-devices-tall }}" style="background-image:url('{{ page.banner.banner_image }}')">
+
+      <div class="{{page.banner.column-size }}-middle {{page.banner.text-align }} padded">
+        <h3>
+          <span class="big-bold {{page.banner.main-text }} editable"> {{page.banner.main-content }} </span> <br />
+          <span class="medium-bold {{page.banner.sub-text }} editable"> {{page.banner.sub-content }} </span> <br />
+        </h3>
+        <h1 class="padded-b-1"> 
+          <span class="{% if page.banner.highlight == true %} highlight {% endif %} {{page.banner.highlight-background }} text-15 editable">{{page.banner.highlighted-content }}</span></h1>
+        <a href="/#order" class="{{page.banner.button }} editable"> {{page.banner.button-text }} </a>
       </div>
   </section>
 

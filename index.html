@@ -1,7 +1,7 @@
 ---
 layout: default
 seo:
-  title: Peruvian Bowls | Ready Meals in Brisbane
+  title: The Coffee Shop | Dine in & Take away in Sydney
   description: Amazing peruvian food for amazing busy people. Delivered right at your door.
   social_image:
   keywords:
@@ -10,7 +10,7 @@ fixed-menu: true
 full-menu: false
 notification-bar: true
 bar:
-  background: bg-featured
+  background: bg-dark
   text: white-text
   text-align: center
 menu:
@@ -29,7 +29,7 @@ banner:
   sub-text: white-text
   block-position: grid-left
   highlight: true
-  highlight-background: bg-light-accent
+  highlight-background: bg-featured
   button: button
   button-text: Order now
 first-section:
@@ -57,7 +57,8 @@ first-section:
 first-section-button:
   button: button-inverted
 banner-2:
-  banner_image: /images/cafe-web1.jpeg
+  banner_image: /images/cafe-web26.jpeg
+  image-position: bg-pos-t
   banner-tall: tall-80
   small-devices-tall: tall-50-md
   column-size: col-6_sm-12
@@ -98,7 +99,7 @@ testimonial-section: true
 testimonial:
   button: button-inverted
 faq: true
-banner-faq_image: /images/cafe-web19.webp
+banner-faq_image: /images/cafe-web17.jpeg
 sign-up-banner: true
 sign-up:
   background: bg-featured
@@ -106,6 +107,8 @@ sign-up:
   sub-text: dark-text
   button: button
 ---
+
+<!--------------------  HEADER AND MENU -------------------->
 
 {% if page.fixed-menu == true and page.full-menu == true %}
 
@@ -214,7 +217,7 @@ sign-up:
 
 <!--------------------  PERUVIAN FOOD BANNER -------------------->
 
-<section class="bg-image {{page.banner-2.block-position }} fixed {{page.banner-2.banner-tall }} {{page.banner-2.small-devices-tall }}" style="background-image:url('{{ page.banner-2.banner_image }}')">
+<section class="bg-image {{page.banner-2.block-position }} {{page.banner-2.image-position }} fixed {{page.banner-2.banner-tall }} {{page.banner-2.small-devices-tall }}" style="background-image:url('{{ page.banner-2.banner_image }}')">
     <div class="{{page.banner-2.column-size }}-middle {{page.banner-2.text-align }}">
       <h2 class="big-bold {{page.banner-2.main-text }} editable">
           How it all started
@@ -229,23 +232,23 @@ sign-up:
 
 <!--------------------  BEST SELLERS -------------------->
 
-  <section class="padded-tb-lg" id="{{site.data.navigation.quick-links.link-2.id }}">
+<section class="padded-tb-lg" id="{{site.data.navigation.quick-links.link-2.id }}">
 
-    {% if page.best-sellers-heading == true %}
-    <h2 class="editable center padded-sm">Where do you want to eat?</h2>
-    {% endif %}
+  {% if page.best-sellers-heading == true %}
+  <h2 class="editable center padded-sm">Where do you want to eat?</h2>
+  {% endif %}
 
-    {% for item in page.best-sellers %}
-    <div class="grid flex-flip">
-      <div class="col-6_sm-12 bg-image {{item.image-position }}" style="background-image:url('{{ item.background_image }}')"></div>
-      <div class="col-6_sm-12-middle padded">
-        <h3> {{item.title }} </h3>
-        <p> {{item.description }} </p>
-        <a class="{{item.button }} editable" href="/#order"> Order or Book now </a>
-      </div>
+  {% for item in page.best-sellers %}
+  <div class="grid flex-flip">
+    <div class="col-6_sm-12 bg-image {{item.image-position }}" style="background-image:url('{{ item.background_image }}')"></div>
+    <div class="col-6_sm-12-middle padded">
+      <h3> {{item.title }} </h3>
+      <p> {{item.description }} </p>
+      <a class="{{item.button }} editable" href="/#order"> Order or Book now </a>
     </div>
-    {% endfor %}
-    
+  </div>
+  {% endfor %}
+  
   </section>
 
 <!--------------------  BANNER DISCOUNT -------------------->

@@ -63,9 +63,9 @@ special-text:
   medium-heading-text-size: '2.5rem'
   medium-heading-text-weight: '400'
   big-text-size: '1.5rem'
-  story-team-font-family: "'charcuterie-deco', sans-serif"
+  story-team-font-family: "'maiola', serif"
   story-team-text-size: '3.5rem'
-  number-font-family: "'charcuterie-deco', sans-serif"
+  number-font-family: "'maiola', serif"
   number-text-size: '2.7rem'
 testimonial:
   card_color: '#ffffff'

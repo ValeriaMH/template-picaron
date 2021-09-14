@@ -1,35 +1,39 @@
 ---
 layout: default
 seo:
-  title: About | Peruvian Bowls
+  title: About | The Coffee Shop
   description: Amazing peruvian food for amazing busy people. Delivered right at your door.
   social_image:
   keywords:
   hide-from-google: true
 fixed-menu: true
+full-menu: false
 notification-bar: true
 bar:
-  background: bg-accent
+  background: bg-dark
   text: white-text
   text-align: center
+menu:
+  button-style: true
 banner:
-  banner_image: /images/demo-web18.jpg
+  banner_image: /images/cafe-web12.jpeg
   aspect-ratio: portrait
 team:
-- name: Omar
+- name: Jhon
   bio: The Chef
   description: Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione eum perferendis minus velit magni rem iure corrupti dolor minima voluptas, hic consequatur quia itaque.
-  profile_image: /images/demo-web19.jpg
-- name: Stefany
-  bio: The Boss
+  profile_image: /images/demo-web21.jpg
+- name: Amanda
+  bio: The Chef
   description: Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione eum perferendis minus velit magni rem iure corrupti dolor minima voluptas, hic consequatur quia itaque.
-  profile_image: /images/demo-web20.jpg
-- name: Leon
-  bio: The King
+  profile_image: /images/demo-web23.jpg
+- name: Chris
+  bio: The Chef
   description: Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione eum perferendis minus velit magni rem iure corrupti dolor minima voluptas, hic consequatur quia itaque.
-  profile_image: /images/demo-web18.jpg
+  profile_image: /images/demo-web22.jpg
 banner-2:
-  banner_image: /images/demo-web12.jpg
+  banner_image: /images/cafe-web26.jpeg
+  image-position: bg-pos-t
   banner-tall: tall-70
   small-devices-tall: tall-50-md
   column-size: col-6_sm-12
@@ -39,101 +43,156 @@ banner-2:
   block-position: grid-center
 highlights:
 - column-size: col-4_sm-12
-  icon: fas fa-pepper-hot
-  title: World's Best Pantry
+  icon: fas fa-globe-americas
+  title: International food
   description: Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum quod et id voluptatem aliquid dignissimos, vitae p
 - column-size: col-4_sm-12
-  icon: fas fa-star
-  title: World's best culinary destination
+  icon: fas fa-carrot
+  title: Local ingredients
   description: Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum quod et id voluptatem aliquid dignissimos, vitae p
 - column-size: col-4_sm-12
-  icon: fas fa-star
-  title: World's Best Pantry
+  icon: fas fa-seedling
+  title: Plant based options
   description: Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum quod et id voluptatem aliquid dignissimos, vitae p
 gallery:
 - column-size: col-3_sm-6_xs-12
-  background_image: /images/demo-web3.jpg
-  popup_image: /images/demo-web3.jpg
-  text-hover: Purple Corn
+  background_image: /images/cafe-web31.jpeg
+  popup_image: /images/cafe-web31.jpeg
+  text-hover: The Restaurant
 - column-size: col-3_sm-6_xs-12
-  background_image: /images/demo-web5.jpg
-  popup_image: /images/demo-web5.jpg
-  text-hover: Purple Corn
+  background_image: /images/cafe-web32.jpeg
+  popup_image: /images/cafe-web32.jpeg
+  text-hover: The Restaurant
 - column-size: col-3_sm-6_xs-12
-  background_image: /images/demo-web4.jpg
-  popup_image: /images/demo-web4.jpg
-  text-hover: Purple Corn
+  background_image: /images/cafe-web27.jpeg
+  popup_image: /images/cafe-web27.jpeg
+  text-hover: Our cofee
 - column-size: col-3_sm-6_xs-12
-  background_image: /images/demo-web2.jpg
-  popup_image: /images/demo-web2.jpg
-  text-hover: Purple Corn
+  background_image: /images/cafe-web18.webp
+  popup_image: /images/cafe-web18.webp
+  text-hover: Covid Safe
+testimonial-section: false
+testimonial:
+  button: button-inverted
+faq: false
+banner-faq_image: /images/cafe-web17.jpeg
+sign-up-banner: false
+sign-up:
+  background: bg-featured
+  main-text: dark-text
+  sub-text: dark-text
+  button: button
 ---
 
 <!--------------------  HEADER AND MENU -------------------->
 
-{% if page.fixed-menu == true %}
+{% if page.fixed-menu == true and page.full-menu == true %}
+
+<section class="{{page.banner.banner-tall }} {{page.banner.small-devices-tall }} grid">
+
+    {% include header-nav-3.html %}
+
+    <div class="col-5_sm-12 padded">
+      <div class="bg-image {{page.banner.aspect-ratio }}" style="background-image:url('{{ page.banner.banner_image }}')"></div>
+    </div>
+
+    <div class="col-6_sm-12-middle padded">
+        <h2 class="big-bold editable"> About us </h2>
+        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero nostrum ex porro qui, explicabo voluptatibus optio quibusdam quis quod, mollitia nulla vel ullam officia architecto, incidunt dignissimos repellat iste rerum. </p>
+        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero nostrum ex porro qui, explicabo voluptatibus optio quibusdam quis quod, mollitia nulla vel ullam officia architecto, incidunt dignissimos repellat iste rerum. </p>
+        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero nostrum ex porro qui, explicabo voluptatibus optio quibusdam quis quod, mollitia nulla vel ullam officia architecto, incidunt dignissimos repellat iste rerum. </p>
+        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero nostrum ex porro qui, explicabo voluptatibus optio quibusdam quis quod, mollitia nulla vel ullam officia architecto, incidunt dignissimos repellat iste rerum. </p>
+    </div>
+
+    <div>
+        <h3 class="our-story-text editable"> OUR STORY </h3>
+    </div>
+
+</section>
+  
+{% elsif page.fixed-menu != true and page.full-menu == true %}
+
+<section class="{{page.banner.banner-tall }} {{page.banner.small-devices-tall }} grid">
+
+    {% include header-nav-4.html %}
+
+    <div class="col-5_sm-12 padded">
+      <div class="bg-image {{page.banner.aspect-ratio }}" style="background-image:url('{{ page.banner.banner_image }}')"></div>
+    </div>
+
+    <div class="col-6_sm-12-middle padded">
+        <h2 class="big-bold editable"> About us </h2>
+        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero nostrum ex porro qui, explicabo voluptatibus optio quibusdam quis quod, mollitia nulla vel ullam officia architecto, incidunt dignissimos repellat iste rerum. </p>
+        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero nostrum ex porro qui, explicabo voluptatibus optio quibusdam quis quod, mollitia nulla vel ullam officia architecto, incidunt dignissimos repellat iste rerum. </p>
+        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero nostrum ex porro qui, explicabo voluptatibus optio quibusdam quis quod, mollitia nulla vel ullam officia architecto, incidunt dignissimos repellat iste rerum. </p>
+        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero nostrum ex porro qui, explicabo voluptatibus optio quibusdam quis quod, mollitia nulla vel ullam officia architecto, incidunt dignissimos repellat iste rerum. </p>
+    </div>
+
+    <div>
+        <h3 class="our-story-text editable"> OUR STORY </h3>
+    </div>
+
+</section>
+
+{% elsif page.fixed-menu == true and page.full-menu != true %}
 
   {% include header-nav.html %}
 
-{% else %}
+<section class="{{page.banner.banner-tall }} {{page.banner.small-devices-tall }} {% if page.notification-bar == true %} margin-fixed {% else %} margin-fixed-sm {% endif %} grid">
 
-  {% include header-nav-2.html %}
+  <div class="col-5_sm-12 padded">
+      <div class="bg-image {{page.banner.aspect-ratio }}" style="background-image:url('{{ page.banner.banner_image }}')"></div>
+  </div>
 
-{% endif %}
-
-<!-- Banner About Us-->
-
-{% if page.fixed-menu == true %}
-
-<section class="grid {% if page.notification-bar == true %} margin-fixed {% else %} margin-fixed-sm {% endif %} tall-60 relative">
-    <div class="col-5_sm-12 padded">
-        <div class="bg-image {{page.banner.aspect-ratio }}" style="background-image:url('{{ page.banner.banner_image }}')"></div>
-    </div>
-    
-    </div>
-    <div class="col-6_sm-12-middle padded">
+  <div class="col-6_sm-12-middle padded">
       <h2 class="big-bold editable"> About us </h2>
       <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero nostrum ex porro qui, explicabo voluptatibus optio quibusdam quis quod, mollitia nulla vel ullam officia architecto, incidunt dignissimos repellat iste rerum. </p>
       <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero nostrum ex porro qui, explicabo voluptatibus optio quibusdam quis quod, mollitia nulla vel ullam officia architecto, incidunt dignissimos repellat iste rerum. </p>
       <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero nostrum ex porro qui, explicabo voluptatibus optio quibusdam quis quod, mollitia nulla vel ullam officia architecto, incidunt dignissimos repellat iste rerum. </p>
       <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero nostrum ex porro qui, explicabo voluptatibus optio quibusdam quis quod, mollitia nulla vel ullam officia architecto, incidunt dignissimos repellat iste rerum. </p>
-    </div>
-    <div>
-        <h3 class="our-story-text editable"> Our story </h3>
-    </div>
+  </div>
+
+  <div>
+      <h3 class="our-story-text editable"> OUR STORY </h3>
+  </div>
+
 </section>
 
-  {% else %}
+{% elsif page.fixed-menu != true and page.full-menu != true %}
 
-<section class="grid tall-60 relative">
+  {% include header-nav-2.html %}
+
+<section class="{{page.banner.banner-tall }} {{page.banner.small-devices-tall }} {% if page.notification-bar == true %} margin-fixed {% else %} margin-fixed-sm {% endif %} grid">
+
   <div class="col-5_sm-12 padded">
       <div class="bg-image {{page.banner.aspect-ratio }}" style="background-image:url('{{ page.banner.banner_image }}')"></div>
   </div>
-  
-  </div>
+
   <div class="col-6_sm-12-middle padded">
-    <h2 class="big-bold editable"> About us </h2>
-    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero nostrum ex porro qui, explicabo voluptatibus optio quibusdam quis quod, mollitia nulla vel ullam officia architecto, incidunt dignissimos repellat iste rerum. </p>
-    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero nostrum ex porro qui, explicabo voluptatibus optio quibusdam quis quod, mollitia nulla vel ullam officia architecto, incidunt dignissimos repellat iste rerum. </p>
-    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero nostrum ex porro qui, explicabo voluptatibus optio quibusdam quis quod, mollitia nulla vel ullam officia architecto, incidunt dignissimos repellat iste rerum. </p>
-    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero nostrum ex porro qui, explicabo voluptatibus optio quibusdam quis quod, mollitia nulla vel ullam officia architecto, incidunt dignissimos repellat iste rerum. </p>
+      <h2 class="big-bold editable"> About us </h2>
+      <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero nostrum ex porro qui, explicabo voluptatibus optio quibusdam quis quod, mollitia nulla vel ullam officia architecto, incidunt dignissimos repellat iste rerum. </p>
+      <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero nostrum ex porro qui, explicabo voluptatibus optio quibusdam quis quod, mollitia nulla vel ullam officia architecto, incidunt dignissimos repellat iste rerum. </p>
+      <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero nostrum ex porro qui, explicabo voluptatibus optio quibusdam quis quod, mollitia nulla vel ullam officia architecto, incidunt dignissimos repellat iste rerum. </p>
+      <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero nostrum ex porro qui, explicabo voluptatibus optio quibusdam quis quod, mollitia nulla vel ullam officia architecto, incidunt dignissimos repellat iste rerum. </p>
   </div>
+
   <div>
-      <h3 class="our-story-text editable"> Our story </h3>
+      <h3 class="our-story-text editable"> OUR STORY </h3>
   </div>
+
 </section>
 
 {% endif %}
 
 
-<!-- The Team -->
+<!--------------------  THE TEAM -------------------->
 
-  <section class="padded padded-b-lg padded-l-xlg sm-padded-lg sm-text-center">
+<section class="padded padded-b-lg padded-l-xlg sm-padded-lg sm-text-center">
 
     <div class="capped-width-narrow">
     
     <div>
-        <h3 class="team-text editable"> The Team </h3>
+        <h3 class="team-text editable"> THE TEAM </h3>
     </div>
         
     {% for person in page.team %}
@@ -159,14 +218,14 @@ gallery:
 
 <!--------------------  PERUVIAN FOOD BANNER -------------------->
 
-<section class="bg-image {{page.banner-2.block-position }} fixed {{page.banner-2.banner-tall }} {{page.banner-2.small-devices-tall }}" style="background-image:url('{{ page.banner-2.banner_image }}')" id="{{site.data.navigation.quick-links.link-4.id }}">
+<section class="bg-image {{page.banner-2.block-position }} {{page.banner-2.image-position }} fixed {{page.banner-2.banner-tall }} {{page.banner-2.small-devices-tall }}" style="background-image:url('{{ page.banner-2.banner_image }}')" id="{{site.data.navigation.quick-links.link-4.id }}">
 
   <div class="{{page.banner-2.column-size }}-middle {{page.banner-2.text-align }}">
     <h2 class="big-bold {{page.banner-2.main-text }} editable">
-        PERUVIAN FOOD
+      How it all started
     </h2>
     <h3 class="{{page.banner-2.sub-text }} editable">
-        Find out why is one of the best in the world
+      We followed our dreams and The Coffee Shop was created
     </h3>
   </div>
 </section> 
@@ -174,43 +233,55 @@ gallery:
 
 <!-- ICONS PERUVIAN FOOD  -->
 
-  <section class="padded padded-t-lg center">
-    <h2 class="editable"> PERUVIAN FOOD HIGLIGHTS </h2>
-    <div class="grid padded-1">
+<section class="padded padded-t-lg center">
+  <h2 class="editable"> Why The Coffee Shop? </h2>
+  <div class="grid padded-1">
 
-      {% for item in page.highlights %}
-      <div class="{{item.column-size }} padded-sm">
-        <i class="{{item.icon }} big-icon"></i>
-        <h4> {{item.title }} </h4>
-        <p>{{item.description}}</p>
-      </div>
+    {% for item in page.highlights %}
+    <div class="{{item.column-size }} padded-sm">
+      <i class="{{item.icon }} big-icon"></i>
+      <h4> {{item.title }} </h4>
+      <p>{{item.description}}</p>
+    </div>
+    {% endfor %}
+
+  </div>
+</section>
+
+<!-- PERUVIAN FOOD POP UP GALLERY -->
+
+<section class="padded center">
+
+  <h2 class="editable"> Gallery </h2>
+  <p class="editable"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+  
+    <div class="gallery grid-center padded-1" id="lightgallery">
+
+      {% for item in page.gallery %}
+      <a class="{{item.column-size }}" href="{{item.popup_image }}">
+          <div class="hover-container" style="background-image:url('{{item.background_image }}')">
+              <div class="hover-overlay">
+                  <div class="hover-inner">
+                      <h4> {{item.text-hover}} </h4>
+                  </div>
+              </div>
+          </div>
+      </a>
       {% endfor %}
   
+  
     </div>
-  </section>
+  
+</section>
 
-  <!-- PERUVIAN FOOD POP UP GALLERY -->
+<!--------------------  TESTIMONIAL SECTION -------------------->
+    
+{% include testimonial.html %}
 
-  <section class="padded center">
+<!--------------------  FAQ SECTION -------------------->
 
-    <h2 class="editable"> PERUVIAN FOOD GALLERY </h2>
-    <p class="editable"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-    
-      <div class="gallery grid-center padded-1" id="lightgallery">
+{% include faq.html %}
 
-        {% for item in page.gallery %}
-        <a class="{{item.column-size }}" href="{{item.popup_image }}">
-            <div class="hover-container" style="background-image:url('{{item.background_image }}')">
-                <div class="hover-overlay">
-                    <div class="hover-inner">
-                        <h4> {{item.text-hover}} </h4>
-                    </div>
-                </div>
-            </div>
-        </a>
-        {% endfor %}
-    
-    
-      </div>
-    
-    </section>
+<!--------------------  SUSCRIBE -------------------->
+
+{% include sign-up.html %}

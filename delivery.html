@@ -1,29 +1,35 @@
 ---
 layout: default
 seo:
-  title: Delivery | Peruvian Bowls
+  title: Delivery | The Coffee Shop
   description: Amazing peruvian food for amazing busy people. Delivered right at your door.
   social_image:
   keywords:
   hide-from-google: true
 fixed-menu: true
+full-menu: false
 notification-bar: true
 bar:
-  background: bg-accent
+  background: bg-dark
   text: white-text
   text-align: center
+menu:
+  button-style: true
 banner:
-  banner_image: /images/demo-web7.jpg
-  image-position: bg-pos-b
+  banner_image: /images/cafe-web15.jpeg
+  image-position: bg-pos-c
   banner-tall: tall-60
   small-devices-tall: tall-40-sm
   column-size: col-5_sm-12
   text-align: left
+  main-content: The Coffee Shop
+  sub-content: Preparing delicious meals since 1999
   main-text: dark-text
   sub-text: dark-text
   block-position: grid-right
-  background: bg-white
+  content-background: bg-white
   button: button-inverted
+  button-text: Order now
 steps:
   - column-size: col-6_sm-12
     number: 1
@@ -42,44 +48,79 @@ steps:
     title: Heat & Enjoy
     description: Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
 banner-2:
-  banner_image: /images/demo-web15.jpg
+  banner_image: /images/cafe-web30.jpeg
   banner-tall: tall-80
   small-devices-tall: tall-50-md
+testimonial-section: false
+testimonial:
+  button: button-inverted
+faq: false
+banner-faq_image: /images/cafe-web17.jpeg
+sign-up-banner: false
+sign-up:
+  background: bg-featured
+  main-text: dark-text
+  sub-text: dark-text
+  button: button
 ---
 
 <!--------------------  HEADER AND MENU -------------------->
 
-{% if page.fixed-menu == true %}
+{% if page.fixed-menu == true and page.full-menu == true %}
+
+  <section class="bg-image padded {{page.banner.block-position }} {{page.banner.banner-tall }} {{page.banner.small-devices-tall }}" style="background-image:url('{{ page.banner.banner_image }}')">
+
+    {% include header-nav-3.html %}
+
+    <div class="{{page.banner.column-size }}-middle {{page.banner.content-background }} {{page.banner.text-align }} padded-2">
+      <h3 class="{{page.banner.main-text }} editable"> {{page.banner.main-content }} </h3>
+      <p class="{{page.banner.sub-text }} editable"> {{page.banner.sub-content }} </p>
+      <a href="/index/#order" class="{{page.banner.button }} editable"> {{page.banner.button-text }} </a>
+    </div>
+
+  </section>
+  
+{% elsif page.fixed-menu != true and page.full-menu == true %}
+
+  <section class="bg-image padded {{page.banner.image-position }} {{page.banner.block-position }} {{page.banner.banner-tall }} {{page.banner.small-devices-tall }}" style="background-image:url('{{ page.banner.banner_image }}')">
+
+    {% include header-nav-4.html %}
+
+    <div class="{{page.banner.column-size }}-middle {{page.banner.content-background }} {{page.banner.text-align }} padded-2">
+      <h3 class="{{page.banner.main-text }} editable"> {{page.banner.main-content }} </h3>
+      <p class="{{page.banner.sub-text }} editable"> {{page.banner.sub-content }} </p>
+      <a href="/index/#order" class="{{page.banner.button }} editable"> {{page.banner.button-text }} </a>
+    </div>
+
+  </section>
+
+{% elsif page.fixed-menu == true and page.full-menu != true %}
 
   {% include header-nav.html %}
 
-{% else %}
+  <section class="bg-image padded {{page.banner.block-position }} {{page.banner.banner-tall }} {{page.banner.small-devices-tall }} {% if page.notification-bar == true %} margin-fixed {% else %} margin-fixed-sm {% endif %}" style="background-image:url('{{ page.banner.banner_image }}')">
+
+    <div class="{{page.banner.column-size }}-middle {{page.banner.content-background }} {{page.banner.text-align }} padded-2">
+      <h3 class="{{page.banner.main-text }} editable"> {{page.banner.main-content }} </h3>
+      <p class="{{page.banner.sub-text }} editable"> {{page.banner.sub-content }} </p>
+      <a href="/index/#order" class="{{page.banner.button }} editable"> {{page.banner.button-text }} </a>
+    </div>
+
+  </section>
+
+  {% elsif page.fixed-menu != true and page.full-menu != true %}
 
   {% include header-nav-2.html %}
 
-{% endif %}
+  <section class="bg-image padded {{page.banner.block-position }} {{page.banner.banner-tall }} {{page.banner.small-devices-tall }}" style="background-image:url('{{ page.banner.banner_image }}')">
 
-<!-- Banner section -->
-
-{% if page.fixed-menu == true %}
-
-<section class="bg-image {{page.banner.block-position }} padded {% if page.notification-bar == true %} margin-fixed {% else %} margin-fixed-sm {% endif %} {{page.banner.banner-tall }} {{page.banner.small-devices-tall }} {{page.banner.image-position }}" style="background-image:url('{{ page.banner.banner_image }}')">
-    <div class="{{page.banner.column-size }}-middle {{page.banner.background }} padded-2">
-      <h3 class="{{page.banner.main-text }} editable"> Tasty Peruvian Food to your door </h3>
-      <p class="{{page.banner.sub-text }} editable"> If you live in Brisbane or Gold Coast, we can deliver ready meals to you </p>
-      <a href="/index/#order" class="{{page.banner.button }} editable"> Order now</a>
+    <div class="{{page.banner.column-size }}-middle {{page.banner.content-background }} {{page.banner.text-align }} padded-2">
+      <h3 class="{{page.banner.main-text }} editable"> {{page.banner.main-content }} </h3>
+      <p class="{{page.banner.sub-text }} editable"> {{page.banner.sub-content }} </p>
+      <a href="/index/#order" class="{{page.banner.button }} editable"> {{page.banner.button-text }} </a>
     </div>
-</section>
 
-{% else %}
-
-<section class="bg-image {{page.banner.block-position }} padded {{page.banner.banner-tall }} {{page.banner.small-devices-tall }} {{page.banner.image-position }}" style="background-image:url('{{ page.banner.banner_image }}')">
-  <div class="{{page.banner.column-size }}-middle {{page.banner.background }} padded-2">
-    <h3 class="{{page.banner.main-text }} editable"> Tasty Peruvian Food to your door </h3>
-    <p class="{{page.banner.sub-text }} editable"> If you live in Brisbane or Gold Coast, we can deliver ready meals to you </p>
-    <a href="/index/#order" class="{{page.banner.button }} editable"> Order now</a>
-  </div>
-</section>
+  </section>
 
 {% endif %}
 
@@ -87,7 +128,7 @@ banner-2:
 <!-- DELIVERY STEPS  -->
 
 <section class="padded center capped-width-narrow">
-  <h2 class="editable"> HOW DELIVERY WORKS </h2>
+  <h2 class="editable"> How Delivery Works </h2>
   <div class="grid padded-1">
 
     {% for item in page.steps %}
@@ -106,3 +147,15 @@ banner-2:
 <section class="bg-image grid-center {{page.banner-2.banner-tall }} {{page.banner-2.small-devices-tall }}" style="background-image:url('{{ page.banner-2.banner_image }}')">
   
 </section>  
+
+<!--------------------  TESTIMONIAL SECTION -------------------->
+    
+{% include testimonial.html %}
+
+<!--------------------  FAQ SECTION -------------------->
+
+{% include faq.html %}
+
+<!--------------------  SUSCRIBE -------------------->
+
+{% include sign-up.html %}

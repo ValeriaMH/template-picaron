@@ -901,7 +901,7 @@ margin: 0;
 top: 0;
 bottom: 28%;
 right: 0;
-opacity: 0.8;
+opacity: 0.5;
 }
 
 .team-text {
@@ -914,7 +914,7 @@ margin: 0;
 top: 0;
 bottom: 43%;
 left: 0;
-opacity: 0.8;
+opacity: 0.5;
 }
 
 .number-text {
@@ -1018,7 +1018,7 @@ border: 1px solid var(--white-text);
 padding: 0.8rem;
 display: block;
 width: 100%;
-font-size: 0.9rem;
+font-size: 1rem;
 font-family: var(--body-font-family);
 }
 
@@ -1069,8 +1069,8 @@ width:100%;
 margin-top: 0.65rem;
 }
 
-.contact input {
-border: 1px solid var(--dark-text);
+.contact .button-inverted input {
+border: 1px solid var(--inverted-background);
 }
 
 .contact input:focus,
@@ -1082,7 +1082,7 @@ border: 1px solid var(--accent-text);
 
 .contact textarea {
 width: 100%;
-border: 1px solid var(--dark-text);
+border: 1px solid var(--white-text);
 font-size: 0.9rem;
 font-family: var(--body-font-family);
 padding: 0.8rem;

@@ -7,14 +7,17 @@ seo:
   keywords:
   hide-from-google: true
 fixed-menu: true
+full-menu: false
 notification-bar: true
 bar:
-  background: bg-accent
+  background: bg-dark
   text: white-text
   text-align: center
+menu:
+  button-style: true
 banner:
-  banner_image: /images/demo-web6.jpg
-  image-position: bg-pos-t
+  banner_image: /images/cafe-web23.webp
+  image-position: bg-pos-c
   banner-tall: tall-60
   small-devices-tall: tall-40-sm
   column-size: col-6_sm-12
@@ -24,6 +27,17 @@ banner:
   block-position: grid-right
 contact:
   button: button-inverted
+testimonial-section: false
+testimonial:
+  button: button-inverted
+faq: true
+banner-faq_image: /images/cafe-web17.jpeg
+sign-up-banner: false
+sign-up:
+  background: bg-featured
+  main-text: dark-text
+  sub-text: dark-text
+  button: button
 ---
 
 <!--------------------  HEADER AND MENU -------------------->
@@ -88,3 +102,15 @@ contact:
       </form>
     </div>
   </section>
+
+  <!--------------------  TESTIMONIAL SECTION -------------------->
+    
+{% include testimonial.html %}
+
+<!--------------------  FAQ SECTION -------------------->
+
+{% include faq.html %}
+
+<!--------------------  SUSCRIBE -------------------->
+
+{% include sign-up.html %}
