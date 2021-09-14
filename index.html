@@ -112,7 +112,7 @@ sign-up:
 
 {% if page.fixed-menu == true and page.full-menu == true %}
 
-  <section class="bg-image {{page.banner.block-position }} {{page.banner.banner-tall }} {{page.banner.small-devices-tall }}" style="background-image:url('{{ page.banner.banner_image }}')">
+  <section class="bg-image {{page.banner.image-position }} {{page.banner.block-position }} {{page.banner.banner-tall }} {{page.banner.small-devices-tall }}" style="background-image:url('{{ page.banner.banner_image }}')">
 
     {% include header-nav-3.html %}
 
@@ -148,7 +148,7 @@ sign-up:
 
   {% include header-nav.html %}
 
-  <section class="bg-image {{page.banner.block-position }} {{page.banner.banner-tall }} {{page.banner.small-devices-tall }} {% if page.notification-bar == true %} margin-fixed {% else %} margin-fixed-sm {% endif %}" style="background-image:url('{{ page.banner.banner_image }}')">
+  <section class="bg-image {{page.banner.image-position }} {{page.banner.block-position }} {{page.banner.banner-tall }} {{page.banner.small-devices-tall }} {% if page.notification-bar == true %} margin-fixed {% else %} margin-fixed-sm {% endif %}" style="background-image:url('{{ page.banner.banner_image }}')">
 
       <div class="{{page.banner.column-size }}-middle {{page.banner.text-align }} padded">
         <h3>
@@ -165,7 +165,7 @@ sign-up:
 
   {% include header-nav-2.html %}
 
-  <section class="bg-image {{page.banner.block-position }} {{page.banner.banner-tall }} {{page.banner.small-devices-tall }}" style="background-image:url('{{ page.banner.banner_image }}')">
+  <section class="bg-image {{page.banner.image-position }} {{page.banner.block-position }} {{page.banner.banner-tall }} {{page.banner.small-devices-tall }}" style="background-image:url('{{ page.banner.banner_image }}')">
 
       <div class="{{page.banner.column-size }}-middle {{page.banner.text-align }} padded">
         <h3>

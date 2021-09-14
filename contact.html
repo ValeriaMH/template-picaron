@@ -22,6 +22,8 @@ banner:
   small-devices-tall: tall-40-sm
   column-size: col-6_sm-12
   text-align: left
+  main-content: Hello
+  sub-content: Get in touch
   main-text: white-text
   sub-text: white-text
   block-position: grid-right
@@ -30,7 +32,7 @@ contact:
 testimonial-section: false
 testimonial:
   button: button-inverted
-faq: true
+faq: false
 banner-faq_image: /images/cafe-web17.jpeg
 sign-up-banner: false
 sign-up:
@@ -42,39 +44,65 @@ sign-up:
 
 <!--------------------  HEADER AND MENU -------------------->
 
-{% if page.fixed-menu == true %}
+{% if page.fixed-menu == true and page.full-menu == true %}
+
+  <section class="bg-image {{page.banner.block-position }} {{page.banner.banner-tall }} {{page.banner.small-devices-tall }}" style="background-image:url('{{ page.banner.banner_image }}')">
+
+    {% include header-nav-3.html %}
+
+    <div class="{{page.banner.column-size }}-middle {{page.banner.text-align }}">
+      <h3>
+        <span class="big-bold {{page.banner.main-text }} editable"> {{page.banner.main-content }} </span> <br>
+        <span class="medium-bold {{page.banner.sub-text }} editable"> {{page.banner.sub-content }} </span> <br>
+      </h3>
+    </div>
+
+  </section>
+  
+{% elsif page.fixed-menu != true and page.full-menu == true %}
+
+  <section class="bg-image {{page.banner.image-position }} {{page.banner.block-position }} {{page.banner.banner-tall }} {{page.banner.small-devices-tall }}" style="background-image:url('{{ page.banner.banner_image }}')">
+
+    {% include header-nav-4.html %}
+
+      <div class="{{page.banner.column-size }}-middle {{page.banner.text-align }}">
+      <h3>
+        <span class="big-bold {{page.banner.main-text }} editable"> {{page.banner.main-content }} </span> <br>
+        <span class="medium-bold {{page.banner.sub-text }} editable"> {{page.banner.sub-content }} </span> <br>
+      </h3>
+    </div>
+
+  </section>
+
+{% elsif page.fixed-menu == true and page.full-menu != true %}
 
   {% include header-nav.html %}
 
-{% else %}
+  <section class="bg-image {{page.banner.image-position }} {{page.banner.block-position }} {{page.banner.banner-tall }} {{page.banner.small-devices-tall }} {% if page.notification-bar == true %} margin-fixed {% else %} margin-fixed-sm {% endif %}" style="background-image:url('{{ page.banner.banner_image }}')">
+
+    <div class="{{page.banner.column-size }}-middle {{page.banner.text-align }}">
+      <h3>
+        <span class="big-bold {{page.banner.main-text }} editable"> {{page.banner.main-content }} </span> <br>
+        <span class="medium-bold {{page.banner.sub-text }} editable"> {{page.banner.sub-content }} </span> <br>
+      </h3>
+    </div>
+
+  </section>
+
+  {% elsif page.fixed-menu != true and page.full-menu != true %}
 
   {% include header-nav-2.html %}
 
-{% endif %}
+  <section class="bg-image {{page.banner.block-position }} {{page.banner.banner-tall }} {{page.banner.small-devices-tall }}" style="background-image:url('{{ page.banner.banner_image }}')">
 
-<!-- Banner section -->
-
-{% if page.fixed-menu == true %}
-
-<section class="bg-image {{page.banner.block-position }} padded {{page.banner.banner-tall }} {{page.banner.small-devices-tall }} {{page.banner.image-position }} {% if page.notification-bar == true %} margin-fixed {% else %} margin-fixed-sm {% endif %}" style="background-image:url('{{ page.banner.banner_image }}')">
-    <div class="{{page.banner.column-size }}-middle">
+      <div class="{{page.banner.column-size }}-middle {{page.banner.text-align }}">
       <h3>
-        <span class="big-bold {{page.banner.main-text }} editable"> HOLA </span> <br>
-        <span class="medium-bold {{page.banner.sub-text }} editable"> Get in touch </span> <br>
+        <span class="big-bold {{page.banner.main-text }} editable"> {{page.banner.main-content }} </span> <br>
+        <span class="medium-bold {{page.banner.sub-text }} editable"> {{page.banner.sub-content }} </span> <br>
       </h3>
     </div>
-</section>
 
-{% else %}
-
-<section class="bg-image {{page.banner.block-position }} padded {{page.banner.banner-tall }} {{page.banner.small-devices-tall }} {{page.banner.image-position }}" style="background-image:url('{{ page.banner.banner_image }}')">
-  <div class="{{page.banner.column-size }}-middle">
-    <h3>
-      <span class="big-bold {{page.banner.main-text }} editable"> HOLA </span> <br>
-      <span class="medium-bold {{page.banner.sub-text }} editable"> Get in touch </span> <br>
-    </h3>
-  </div>
-</section>
+  </section>
 
 {% endif %}
 
