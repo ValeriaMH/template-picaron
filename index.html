@@ -7,11 +7,14 @@ seo:
   keywords:
   hide-from-google: true
 fixed-menu: true
+full-menu: false
 notification-bar: true
 bar:
   background: bg-accent
   text: white-text
   text-align: center
+menu:
+  button-style: true
 banner:
   banner_image: /images/cafe-web23.webp
   image-position: Top
@@ -19,13 +22,17 @@ banner:
   small-devices-tall: tall-60-sm
   column-size: col-7_sm-12
   text-align: left
+  main-content: PERUVIAN
+  sub-content: BOWLS
+  highlighted-content: Brisbane
   main-text: white-text
   sub-text: white-text
   block-position: grid-left
   highlight: true
-  highlight: bg-light-featured
+  highlight-background: bg-light-featured
   button: button
-how-it-works:
+  button-text: shop
+first-section:
   - column-size: col-4_sm-12
     background_image: /images/cafe-web7.jpeg
     hover-title: One
@@ -47,7 +54,7 @@ how-it-works:
     description: >-
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, maxime,
       distinctio illum dolore architecto.
-how-it-works-button:
+first-section-button:
   button: button-inverted
 banner-2:
   banner_image: /images/cafe-web1.jpeg
@@ -59,7 +66,8 @@ banner-2:
   sub-text: white-text
   block-position: grid-center
   button: button
-meal-plans:
+best-sellers-heading: true
+best-sellers:
   - background_image: /images/cafe-web20.webp
     image-position: bg-pos-c
     title: Weekly Plan
@@ -83,6 +91,7 @@ special-offer:
   sub-text: white-text
 why-us:
   background_image: /images/cafe-web12.jpeg
+  image-position: bg-pos-t
   background: bg-warm
   button: button-inverted
 testimonial-section: true
@@ -98,62 +107,87 @@ sign-up:
   button: button-special
 ---
 
-<!--------------------  HEADER AND MENU -------------------->
+{% if page.fixed-menu == true and page.full-menu == true %}
 
-{% if page.fixed-menu == true %}
+  <section class="bg-image {{page.banner.block-position }} {{page.banner.banner-tall }} {{page.banner.small-devices-tall }}" style="background-image:url('{{ page.banner.banner_image }}')">
+
+    {% include header-nav-3.html %}
+
+      <div class="{{page.banner.column-size }}-middle {{page.banner.text-align }} padded padded-t-lg">
+        <h3>
+          <span class="big-bold {{page.banner.main-text }} editable"> {{page.banner.main-content }} </span> <br />
+          <span class="medium-bold {{page.banner.sub-text }} editable"> {{page.banner.sub-content }} </span> <br />
+        </h3>
+        <h1 class="padded-b-1"> 
+          <span class="{% if page.banner.highlight == true %} highlight {% endif %} {{page.banner.highlight-background }} text-15 editable">{{page.banner.highlighted-content }}</span></h1>
+        <a href="/#order" class="{{page.banner.button }} editable"> {{page.banner.button-text }} </a>
+      </div>
+  </section>
+  
+{% elsif page.fixed-menu != true and page.full-menu == true %}
+
+  <section class="bg-image {{page.banner.image-position }} {{page.banner.block-position }} {{page.banner.banner-tall }} {{page.banner.small-devices-tall }}" style="background-image:url('{{ page.banner.banner_image }}')">
+
+    {% include header-nav-4.html %}
+
+      <div class="{{page.banner.column-size }} {{page.banner.text-align }} padded">
+        <h3>
+          <span class="big-bold {{page.banner.main-text }} editable"> {{page.banner.main-content }} </span> <br />
+          <span class="medium-bold {{page.banner.sub-text }} editable"> {{page.banner.sub-content }}. </span> <br />
+        </h3>
+        <h1 class="padded-b-1"> 
+          <span class="{% if page.banner.highlight == true %} highlight {% endif %} {{page.banner.highlight-background }} text-15 editable">{{page.banner.highlighted-content }}</span></h1>
+        <a href="/#order" class="{{page.banner.button }} editable"> {{page.banner.button-text }} </a>
+      </div>
+  </section>
+
+{% elsif page.fixed-menu == true and page.full-menu != true %}
 
   {% include header-nav.html %}
 
-{% else %}
+  <section class="bg-image {{page.banner.block-position }} {{page.banner.banner-tall }} {{page.banner.small-devices-tall }} {% if page.notification-bar == true %} margin-fixed {% else %} margin-fixed-sm {% endif %}" style="background-image:url('{{ page.banner.banner_image }}')">
+
+      <div class="{{page.banner.column-size }}-middle {{page.banner.text-align }} padded">
+        <h3>
+          <span class="big-bold {{page.banner.main-text }} editable"> {{page.banner.main-content }} </span> <br />
+          <span class="medium-bold {{page.banner.sub-text }} editable"> {{page.banner.sub-content }} </span> <br />
+        </h3>
+        <h1 class="padded-b-1"> 
+          <span class="{% if page.banner.highlight == true %} highlight {% endif %} {{page.banner.highlight-background }} text-15 editable">{{page.banner.highlighted-content }}</span></h1>
+        <a href="/#order" class="{{page.banner.button }} editable"> {{page.banner.button-text }} </a>
+      </div>
+  </section>
+
+  {% elsif page.fixed-menu != true and page.full-menu != true %}
 
   {% include header-nav-2.html %}
 
-{% endif %}
+  <section class="bg-image {{page.banner.block-position }} {{page.banner.banner-tall }} {{page.banner.small-devices-tall }}" style="background-image:url('{{ page.banner.banner_image }}')">
 
-
-<!------------------ HOME BANNER ------------------------>
-
-{% if page.fixed-menu == true %}
-
-  <section class="bg-image {{page.banner.block-position }} padded {{page.banner.banner-tall }} {% if page.notification-bar == true %} margin-fixed {% else %} margin-fixed-sm {% endif %} {{page.banner.small-devices-tall }}" style="background-image:url('{{ page.banner.banner_image }}')">
-      <div class="{{page.banner.column-size }}-middle {{page.banner.text-align }}">
+      <div class="{{page.banner.column-size }}-middle {{page.banner.text-align }} padded">
         <h3>
-          <span class="big-bold {{page.banner.main-text }} editable"> AMAZING PERUVIAN MEALS </span> <br />
-          <span class="medium-bold {{page.banner.sub-text }} editable"> for amazing busy people </span> <br />
+          <span class="big-bold {{page.banner.main-text }} editable"> {{page.banner.main-content }} </span> <br />
+          <span class="medium-bold {{page.banner.sub-text }} editable"> {{page.banner.sub-content }} </span> <br />
         </h3>
         <h1 class="padded-b-1"> 
-          <span class="{% if page.banner.highlight == true %} highlight {% endif %} {{page.banner.highlight }} text-15 editable">Ready Meals delivered right at your door.</span></h1>
-        <a href="/#order" class="{{page.banner.button }} editable"> Order now </a>
-      </div>
-  </section>
-
-{% else %}
-
-  <section class="bg-image {{page.banner.image-position }} {{page.banner.block-position }} padded {{page.banner.banner-tall }} {{page.banner.small-devices-tall }}" style="background-image:url('{{ page.banner.banner_image }}')">
-      <div class="{{page.banner.column-size }}-middle {{page.banner.text-align }}">
-        <h3>
-          <span class="big-bold {{page.banner.main-text }} editable"> AMAZING PERUVIAN MEALS </span> <br />
-          <span class="medium-bold {{page.banner.sub-text }} editable"> for amazing busy people </span> <br />
-        </h3>
-        <h1 class="padded-b-1"> 
-          <span class="{% if page.banner.highlight == true %} highlight {% endif %} {{page.banner.highlight }} text-15 editable">Ready Meals delivered right at your door.</span></h1>
-        <a href="/#order" class="{{page.banner.button }} editable"> Order now </a>
+          <span class="{% if page.banner.highlight == true %} highlight {% endif %} {{page.banner.highlight-background }} text-15 editable">{{page.banner.highlighted-content }}</span></h1>
+        <a href="/#order" class="{{page.banner.button }} editable"> {{page.banner.button-text }} </a>
       </div>
   </section>
 
 {% endif %}
 
 
-<!--------------------  HOW IT WORKS SECTION -------------------->
+<!--------------------  FIRST SECTION -------------------->
 
 <section class="padded center padded-t-lg" id="{{site.data.navigation.quick-links.link-3.id }}">
-    <h2 class="uppercase editable">
-        How it works
+    <h2 class="editable">
+        How Delivery Works
     </h2>
 
     <div class="grid padded-1">
 
-      {% for item in page.how-it-works %}
+      {% for item in page.first-section %}
         <div class="{{item.column-size }} padded-1">
             <div class="hover-container" style="background-image:url('{{ item.background_image }}')">
             <div class="hover-overlay">
@@ -171,7 +205,7 @@ sign-up:
         {% endfor %}
         
         <div class="col-12 center">
-          <a href="/#order" class="{{page.how-it-works-button.button }} editable"> Order now </a>
+          <a href="/#order" class="{{page.first-section-button.button }} editable"> Order now </a>
         </div>
         
     </div>
@@ -193,11 +227,15 @@ sign-up:
   </section> 
   
 
-<!--------------------  MEAL PLANS -------------------->
+<!--------------------  BEST SELLERS -------------------->
 
   <section class="padded-tb-lg" id="{{site.data.navigation.quick-links.link-2.id }}">
 
-    {% for item in page.meal-plans %}
+    {% if page.best-sellers-heading == true %}
+    <h2 class="editable center padded-sm">Best Sellers</h2>
+    {% endif %}
+
+    {% for item in page.best-sellers %}
     <div class="grid flex-flip">
       <div class="col-6_sm-12 bg-image {{item.image-position }}" style="background-image:url('{{ item.background_image }}')"></div>
       <div class="col-6_sm-12-middle padded">
@@ -218,7 +256,7 @@ sign-up:
 
 {% include shopify.html %}
 
-<!--------------------  WHY PERUVIAN BOWLS -------------------->
+<!--------------------  WHY US -------------------->
 
 <section class="grid padded padded-l-0 padded-tb sm-padded">
   <div class="bg-image col-7_sm-12 tall-70 tall-50-sm" style="background-image:url('{{ page.why-us.background_image }}')">
@@ -226,7 +264,7 @@ sign-up:
   <div class="col-5_sm-12-middle relative">
     <div class="bg-why-over {{ page.why-us.background }} bg-over">
         <h2 class="big-bold editable">
-            Why Peruvian Bowls?
+            Our Motto
         </h2>
         <p class="editable">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.

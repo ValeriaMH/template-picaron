@@ -1,32 +1,31 @@
 <!-- Site Header -->
 
-<header class="grid fixed-menu header-menu">
+<header class="grid fixed-menu">
 
     {% if page.notification-bar == true %}
 
     <!-- Informative section Fixed -->
     <div class="col-12 padded-0">
 
-        <div class="notification-bar {{page.bar.background }} {{page.bar.text }} {{page.bar.text-align }}">
-        <p class="editable"> Free shipping on orders over $50 </p>
+        <div class="notification-bar {{page.bar.background }} {{page.bar.text }} {{page.bar.font-size }} {{page.bar.text-align }}">
+        <p class="editable {{page.bar.font-size }}"> Free shipping on orders over $50 </p>
         </div>
     
     </div>
 
     {% endif %}
 
-    <div class="col-2_md-3-middle left padded-l-1" data-aos="fade-right">
+    <div class="col-2_md-3-middle left padded-l-2" data-aos="fade-right">
         <a href="/index.html" class="logo">
-            <img src="{{ site.data.site-settings.general.logo_image }}" />
+            <img src="{{ site.data.site-settings.general.logo_image }}"></img>
         </a>
     </div>
 
-    <nav class="col-10_md-9-middle right hide-sm padded-1">
-        
+    <nav class="col-10_md-10-middle right hide-sm padded-1">
         <div class="dropdown">
             <a href="{{ site.data.navigation.menu.link-1.url }}" class="dropdown-title"> {{ site.data.navigation.menu.link-1.name }} </a>
             <div class="dropdown-content">
-              <a href="/index"> Candles </a>
+              <a href="/food"> Food </a>
               <a href="/bali"> Bali </a>
               <a href="/self-care"> Self Care </a>
               <a href="/travel"> Travel </a>
@@ -83,7 +82,7 @@
                 <i class="fab fa-twitter"></i>
             </a>
 
-            {% endif %}
+        {% endif %}
 
     </nav>
 
@@ -103,7 +102,7 @@
 
     <div class="col-5-middle-center capped-width-v-narrow">
         <a href="/index.html" class="logo">
-            <img src="{{ site.data.site-settings.general.menu-logo_image }}" />
+            <img src="{{ site.data.site-settings.general.logo_image }}"></img>
         </a>
     </div>
 

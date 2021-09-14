@@ -1,7 +1,7 @@
 general:
   logo_image: /images/demo-web24.png
-  logo-max-width:
-  menu-logo_image: /images/demo-web24.png
+  logo-max-width: 40%
+  menu-logo_image: /images/candle-web13.png
   form-email:
 technical:
   fonts-embed: <link rel="stylesheet" href="https://use.typekit.net/muy1sey.css">
