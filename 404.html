@@ -1,0 +1,51 @@
+---
+layout: default
+seo:
+  title: Privacy Policy | The Coffee Shop 
+  description: Amazing peruvian food for amazing busy people. Delivered right at your door.
+  social_image:
+  keywords:
+  hide-from-google: true
+fixed-menu: true
+notification-bar: false
+bar:
+  background: bg-dark
+  text: white-text
+  text-align: center
+menu:
+  button-style: true
+---
+
+<!--------------------  HEADER AND MENU -------------------->
+
+{% if page.fixed-menu == true %}
+
+  {% include header-nav.html %}
+
+  <section class="bg-image {{page.banner.image-position }} {{page.banner.block-position }} {{page.banner.banner-tall }} {{page.banner.small-devices-tall }} {% if page.notification-bar == true %} margin-fixed {% else %} margin-fixed-sm {% endif %}" style="background-image:url('{{ page.banner.banner_image }}')">
+
+  </section>
+
+  {% else %}
+
+  {% include header-nav-2.html %}
+
+  <section class="bg-image {{page.banner.image-position }} {{page.banner.block-position }} {{page.banner.banner-tall }} {{page.banner.small-devices-tall }}" style="background-image:url('{{ page.banner.banner_image }}')">
+
+  </section>
+
+{% endif %}
+
+<section class="padded padded-t-lg">
+
+    <div class="grid capped-width-narrow">
+
+        <div class="col-12 center padded-b-xlg">
+            <h4 class="medium-bold">PAGE NOT FOUND</h4>
+            <p class="padded-20 padded-b-0 padded-t-0 ">Oops! Looks like this isn't a page we can direct you to. You can head back to our home page to keep exploring the shop and more, or contact us if you can’t find what you are looking for!</p>
+            <a href="/index" class="button-inverted">Inicio</a>
+        </div>
+
+    </div>
+
+</section>
