@@ -7,7 +7,6 @@ seo:
   keywords:
   hide-from-google: true
 fixed-menu: true
-full-menu: false
 notification-bar: true
 bar:
   background: bg-dark
@@ -50,41 +49,7 @@ sign-up:
 
 <!--------------------  HEADER AND MENU -------------------->
 
-{% if page.fixed-menu == true and page.full-menu == true %}
-
-  <section class="bg-image {{page.banner.block-position }} {{page.banner.banner-tall }} {{page.banner.small-devices-tall }}" style="background-image:url('{{ page.banner.banner_image }}')">
-
-    {% include header-nav-3.html %}
-
-      <div class="{{page.banner.column-size }}-middle {{page.banner.text-align }} padded padded-t-lg">
-        <h3>
-          <span class="big-bold {{page.banner.main-text }} editable"> {{page.banner.main-content }} </span> <br />
-          <span class="medium-bold {{page.banner.sub-text }} editable"> {{page.banner.sub-content }} </span> <br />
-        </h3>
-        <h1 class="padded-b-1"> 
-          <span class="{% if page.banner.highlight == true %} highlight {% endif %} {{page.banner.highlight-background }} text-15 editable">{{page.banner.highlighted-content }}</span></h1>
-        <a href="/#order" class="{{page.banner.button }} editable"> {{page.banner.button-text }} </a>
-      </div>
-  </section>
-  
-{% elsif page.fixed-menu != true and page.full-menu == true %}
-
-  <section class="bg-image {{page.banner.image-position }} {{page.banner.block-position }} {{page.banner.banner-tall }} {{page.banner.small-devices-tall }}" style="background-image:url('{{ page.banner.banner_image }}')">
-
-    {% include header-nav-4.html %}
-
-      <div class="{{page.banner.column-size }} {{page.banner.text-align }} padded">
-        <h3>
-          <span class="big-bold {{page.banner.main-text }} editable"> {{page.banner.main-content }} </span> <br />
-          <span class="medium-bold {{page.banner.sub-text }} editable"> {{page.banner.sub-content }}. </span> <br />
-        </h3>
-        <h1 class="padded-b-1"> 
-          <span class="{% if page.banner.highlight == true %} highlight {% endif %} {{page.banner.highlight-background }} text-15 editable">{{page.banner.highlighted-content }}</span></h1>
-        <a href="/#order" class="{{page.banner.button }} editable"> {{page.banner.button-text }} </a>
-      </div>
-  </section>
-
-{% elsif page.fixed-menu == true and page.full-menu != true %}
+{% if page.fixed-menu == true %}
 
   {% include header-nav.html %}
 
@@ -101,7 +66,7 @@ sign-up:
       </div>
   </section>
 
-  {% elsif page.fixed-menu != true and page.full-menu != true %}
+  {% else %}
 
   {% include header-nav-2.html %}
 
