@@ -1,7 +1,9 @@
 general:
   logo_image: /images/demo-web24.png
-  logo-max-width: 40%
-  menu-logo_image: /images/demo-web24.png
+  logo-size: 40%
+  mobile-logo_image: /images/demo-web24.png
+  mobile-logo-size: 100%
+  explore-logo-size: 50%
   form-email:
 technical:
   fonts-embed: <link rel="stylesheet" href="https://use.typekit.net/muy1sey.css">

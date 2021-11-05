@@ -214,7 +214,15 @@ background-image: url('/images/demo-web6.jpg');
 }
 
 .logo img {
-max-width: var(--logo-max-width);
+max-width: var(--logo-size);
+}
+
+.logo-mobile img {
+  max-width: var(--mobile-logo-size);
+}
+
+.logo-mobile img {
+  max-width: var(--explore-logo-size);
 }
 
 .img-1 {
@@ -750,6 +758,7 @@ padding: 5%;
 /* box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.1); */
 transition:1s;
 z-index: 3;
+white-space:nowrap;
 }
 
 .mobile-menu a {
@@ -825,9 +834,10 @@ line-height: 1;
 padding: 1rem 1.5rem;
 width: 70%;
 height: 100%;
-border: 1px solid var(--orange-text);
+border: 1px solid var(--dark-text);
 border-radius: 3px;
 transition: 0.3s;
+white-space:nowrap;
 }
 
 .explore a {
@@ -837,14 +847,14 @@ display: block;
 
 .explore:hover {
 color: white;
-background-color: var(--orange);
-border: 1px solid var(--orange);
+background-color: var(--dark-text);
+border: 1px solid var(--dark-text);
 }
 
 .explore a:hover {
 color: white;
-background-color: var(--orange);
-border: 1px solid var(--orange);
+background-color: var(--dark-text);
+border: 1px solid var(--dark-text);
 }
 
 .ig-user {
@@ -1129,11 +1139,11 @@ padding: 0.5rem 1rem;
 display: none;
 text-align: center;
 position: fixed;
-left: 1rem;
-right: 1rem;
+left: 0;
+right: 0;
 bottom: 0;
-width: calc(100% - 2rem);
-background: #222;
+width: 100%;
+background: var(--dark-background);
 color: rgba(255,255,255,0.8);
 }
 #cookie-notice a {
@@ -1147,8 +1157,8 @@ opacity: 0.8;
 #close-cookie-banner {
 padding: 1rem;
 cursor: pointer;
-font-size: 0.8rem;
-opacity: 0.5
+font-size: 2rem;
+opacity: 0.5;
 }
 
 

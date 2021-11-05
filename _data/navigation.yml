@@ -38,3 +38,14 @@ quick-links:
     name: Our Meals
     url: /about/#peru
     id: peru
+explore-menu:
+- name: Order here
+  url: /menu
+- name: How delivery works
+  url: /delivery
+- name: Contact us
+  url: /contact
+- name: Connect with us on Facebook
+  url: /menu
+- name: Explore our website
+  url: /index
