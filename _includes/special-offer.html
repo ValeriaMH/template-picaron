@@ -1,12 +1,20 @@
 {% if page.special-banner == true %}
 
-<section class="center padded tall-40 {{page.special-offer.background }}">
-    <h3 class="medium-bold {{page.special-offer.main-text }} editable" id="{{site.data.navigation.quick-links.link-1.id }}">
-        Free delivery on orders over $50.
-    </h3>
-    <p class="text-15 {{page.special-offer.sub-text }} editable">
-        And 10% off in your first purchase with the code FIRSTMEAL
-    </p>
+<section class="center padded tall-40 tall-30-md tall-30-sm tall-40-xs {{page.special-offer.background }}">
+    <div class="grid">
+
+        <div class="col-12 xs-padded-25 sm-padded-15 xs-padded-r-2 xs-padded-l-2 md-padded-lg">
+
+            <h3 class="medium-bold {{page.special-offer.main-text }} editable" id="{{site.data.navigation.quick-links.link-1.id }}">
+                Free delivery on orders over $50.
+            </h3>
+            <p class="text-15 {{page.special-offer.sub-text }} editable">
+                And 10% off in your first purchase with the code FIRSTMEAL
+            </p>
+
+        </div>
+
+    </div>
 
 {% endif %}
   
