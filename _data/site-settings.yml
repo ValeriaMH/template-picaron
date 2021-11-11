@@ -1,7 +1,7 @@
 general:
-  logo_image: /images/demo-web24.png
-  logo-size: 40%
-  mobile-logo_image: /images/demo-web24.png
+  logo_image: /images/cafe-web33.png
+  logo-size: 16%
+  mobile-logo_image: /images/cafe-web33.png
   mobile-logo-size: 100%
   explore-logo-size: 50%
   form-email:
