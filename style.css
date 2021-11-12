@@ -1235,6 +1235,7 @@ vertical-align: top;
 .sm-padded-05  { padding: 0.5rem; }
 
 .sm-padded-t-0 { padding-top: 0; }
+.sm-padded-t-1 { padding-top: 1rem; }
 .sm-padded-t-20 { padding-top: 30%; }
 .sm-padded-b-0 { padding-bottom: 0; }
 .sm-margin-t-0 { margin-top: 0; }
@@ -1364,6 +1365,9 @@ width: 18px;
   min-width: 25rem;
 }
 
+.logo img {
+  max-width: 35%;
+}
 
 
 }

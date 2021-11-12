@@ -14,7 +14,7 @@ background_colors:
   accent-background_color: '#fa5d00'
   light-accent-background_color: '#f7844b'
   featured-background_color: '#aac5b2'
-  light-featured-background_color: '#d3b36a'
+  light-featured-background_color: '#f2e1c2'
   light-background_color: '#ededed'
   white-background_color: '#ffffff'
 body:
